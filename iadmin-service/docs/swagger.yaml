@@ -1,0 +1,859 @@
+basePath: /
+definitions:
+  model.SysApi:
+    properties:
+      apiGroup:
+        type: string
+      created_at:
+        type: integer
+      description:
+        type: string
+      id:
+        type: integer
+      method:
+        type: string
+      path:
+        type: string
+      updated_at:
+        type: integer
+    type: object
+  model.SysMenu:
+    properties:
+      created_at:
+        type: integer
+      full_page:
+        type: boolean
+      has_authority:
+        type: boolean
+      icon:
+        type: string
+      id:
+        type: integer
+      keep_alive:
+        type: boolean
+      menuLevel:
+        type: integer
+      name:
+        type: string
+      order:
+        type: integer
+      parentId:
+        description: 父菜单ID
+        type: integer
+      path:
+        description: 路由path
+        type: string
+      show_in_menu:
+        type: boolean
+      title:
+        type: string
+      updated_at:
+        type: integer
+      view_path:
+        type: string
+    type: object
+  model.SysOperationRecord:
+    properties:
+      agent:
+        description: 代理
+        type: string
+      body:
+        description: 请求Body
+        type: string
+      created_at:
+        type: integer
+      error_message:
+        description: 错误信息
+        type: string
+      id:
+        type: integer
+      ip:
+        description: 请求ip
+        type: string
+      latency:
+        description: 延迟
+        type: string
+      method:
+        description: 请求方法
+        type: string
+      path:
+        description: 请求路径
+        type: string
+      resp:
+        description: 响应Body
+        type: string
+      status:
+        description: 请求状态
+        type: integer
+      updated_at:
+        type: integer
+      user:
+        $ref: '#/definitions/model.SysUser'
+      user_id:
+        description: 用户id
+        type: integer
+    type: object
+  model.SysRole:
+    properties:
+      apis:
+        items:
+          $ref: '#/definitions/model.SysApi'
+        type: array
+      created_at:
+        type: integer
+      id:
+        type: integer
+      menus:
+        items:
+          $ref: '#/definitions/model.SysMenu'
+        type: array
+      name:
+        type: string
+      updated_at:
+        type: integer
+    type: object
+  model.SysUser:
+    properties:
+      created_at:
+        type: integer
+      id:
+        type: integer
+      phone:
+        type: string
+      real_name:
+        type: string
+      role:
+        $ref: '#/definitions/model.SysRole'
+      role_id:
+        type: integer
+      updated_at:
+        type: integer
+    type: object
+  request.IdsReq:
+    properties:
+      ids:
+        items:
+          type: integer
+        type: array
+    type: object
+  request.Login:
+    properties:
+      captcha:
+        type: string
+      captchaId:
+        type: string
+      password:
+        type: string
+      phone:
+        type: string
+    type: object
+  request.Pagination:
+    properties:
+      current:
+        description: 页码
+        type: integer
+      pageSize:
+        description: 每页大小
+        type: integer
+    type: object
+  request.Register:
+    properties:
+      captcha:
+        type: string
+      captchaId:
+        type: string
+      password:
+        type: string
+      phone:
+        type: string
+      realName:
+        type: string
+    type: object
+  request.SysApiListSearch:
+    properties:
+      apiGroup:
+        type: string
+      createdAt:
+        items:
+          type: integer
+        type: array
+      description:
+        type: string
+      method:
+        type: string
+      pagination:
+        $ref: '#/definitions/request.Pagination'
+    type: object
+  request.SysOperationRecordSearch:
+    properties:
+      createdAt:
+        items:
+          type: integer
+        type: array
+      current:
+        description: 页码
+        type: integer
+      method:
+        description: 请求方法
+        type: string
+      pageSize:
+        description: 每页大小
+        type: integer
+      path:
+        description: 请求路径
+        type: string
+      status:
+        description: 请求状态
+        type: string
+    type: object
+  request.SysRoleApiConfig:
+    properties:
+      apis:
+        items:
+          $ref: '#/definitions/model.SysApi'
+        type: array
+      role_id:
+        type: integer
+    type: object
+  request.SysRoleMenuConfig:
+    properties:
+      menus:
+        items:
+          $ref: '#/definitions/model.SysMenu'
+        type: array
+      role_id:
+        type: integer
+    type: object
+  request.SysUserListSearch:
+    properties:
+      createdAt:
+        items:
+          type: integer
+        type: array
+      pagination:
+        $ref: '#/definitions/request.Pagination'
+      phone:
+        type: string
+      realName:
+        type: string
+    type: object
+info:
+  contact: {}
+  description: This is a sample Server pets
+  title: Swagger Example API
+  version: 0.0.1
+paths:
+  /api/base/captcha:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"验证码获取成功"}'
+          schema:
+            type: string
+      summary: 生成验证码
+      tags:
+      - Base
+  /api/base/login:
+    post:
+      parameters:
+      - description: 用户名, 密码, 验证码
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/request.Login'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"登录成功"}'
+          schema:
+            type: string
+      summary: 用户登录
+      tags:
+      - Base
+  /api/base/register:
+    post:
+      parameters:
+      - description: 用户名, 密码, 真实姓名, 验证码
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/request.Register'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"注册成功"}'
+          schema:
+            type: string
+      summary: 用户注册
+      tags:
+      - Base
+  /api/sysApi/addSysApiInfo:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 接口模型
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/model.SysApi'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"新增成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 新增接口
+      tags:
+      - SysApi
+  /api/sysApi/deleteBatchSysApi:
+    delete:
+      consumes:
+      - application/json
+      parameters:
+      - description: id列表
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/request.IdsReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"批量删除成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 批量删除接口
+      tags:
+      - SysApi
+  /api/sysApi/getSysApiList:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 页码, 每页大小，搜索条件
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/request.SysApiListSearch'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取数据成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 分页获取接口列表
+      tags:
+      - SysApi
+  /api/sysApi/getSysApiTree:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取数据成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 获得接口树
+      tags:
+      - SysApi
+  /api/sysApi/updateSysApiInfo:
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: 接口模型
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/model.SysApi'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"更新成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 更新接口信息
+      tags:
+      - SysApi
+  /api/sysMenu/addSysMenuInfo:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 菜单模型
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/model.SysMenu'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"新增成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 新增菜单
+      tags:
+      - SysMenu
+  /api/sysMenu/deleteBatchSysMenu:
+    delete:
+      consumes:
+      - application/json
+      parameters:
+      - description: id列表
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/request.IdsReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"批量删除成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 批量删除菜单
+      tags:
+      - SysMenu
+  /api/sysMenu/getSysMenuByToken:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 获得某人的菜单树
+      tags:
+      - SysMenu
+  /api/sysMenu/getSysRouteList:
+    post:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 分页获取路由菜单列表
+      tags:
+      - SysMenu
+  /api/sysMenu/updateSysMenuInfo:
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: 菜单模型
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/model.SysMenu'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"更新成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 更新菜单信息
+      tags:
+      - SysMenu
+  /api/sysRole/addSysRoleInfo:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 角色模型
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/model.SysRole'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"新增成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 新增角色
+      tags:
+      - SysRole
+  /api/sysRole/deleteBatchSysRole:
+    delete:
+      consumes:
+      - application/json
+      parameters:
+      - description: id列表
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/request.IdsReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"批量删除成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 批量删除角色
+      tags:
+      - SysRole
+  /api/sysRole/getSysRoleList:
+    get:
+      consumes:
+      - application/json
+      parameters:
+      - description: 页码
+        in: query
+        name: current
+        type: integer
+      - description: 每页大小
+        in: query
+        name: pageSize
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 分页获取角色列表
+      tags:
+      - SysRole
+  /api/sysRole/updateSysRoleApiConfig:
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: role_id,id列表
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/request.SysRoleApiConfig'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"配置角色接口成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 配置角色接口
+      tags:
+      - SysRole
+  /api/sysRole/updateSysRoleInfo:
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: 角色模型
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/model.SysRole'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"更新成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 更新角色信息
+      tags:
+      - SysRole
+  /api/sysRole/updateSysRoleMenuConfig:
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: role_id,id列表
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/request.SysRoleMenuConfig'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"配置角色菜单成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 配置角色菜单
+      tags:
+      - SysRole
+  /api/sysUser/addSysUserInfo:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 手机号，真实姓名
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/model.SysUser'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"新增成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 新增用户
+      tags:
+      - SysUser
+  /api/sysUser/deleteBatchSysUser:
+    delete:
+      consumes:
+      - application/json
+      parameters:
+      - description: id列表
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/request.IdsReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"批量删除成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 批量删除用户
+      tags:
+      - SysUser
+  /api/sysUser/getSysUserList:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 页码, 每页大小，搜索条件
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/request.SysUserListSearch'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 分页获取用户列表
+      tags:
+      - SysUser
+  /api/sysUser/updateSysUserInfo:
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: 手机号，真实姓名
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/model.SysUser'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"更新成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 更新用户信息
+      tags:
+      - SysUser
+  /sysOperationRecord/createSysOperationRecord:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 创建SysOperationRecord
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/model.SysOperationRecord'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 创建SysOperationRecord
+      tags:
+      - SysOperationRecord
+  /sysOperationRecord/deleteBatchSysOperationRecord:
+    delete:
+      consumes:
+      - application/json
+      parameters:
+      - description: 批量删除SysOperationRecord
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/request.IdsReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"批量删除成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 批量删除SysOperationRecord
+      tags:
+      - SysOperationRecord
+  /sysOperationRecord/deleteSysOperationRecord:
+    delete:
+      consumes:
+      - application/json
+      parameters:
+      - description: SysOperationRecord模型
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/model.SysOperationRecord'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"删除成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 删除SysOperationRecord
+      tags:
+      - SysOperationRecord
+  /sysOperationRecord/findSysOperationRecord:
+    get:
+      consumes:
+      - application/json
+      parameters:
+      - description: Id
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/model.SysOperationRecord'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"查询成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 用id查询SysOperationRecord
+      tags:
+      - SysOperationRecord
+  /sysOperationRecord/getSysOperationRecordList:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 页码, 每页大小, 搜索条件
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/request.SysOperationRecordSearch'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 分页获取SysOperationRecord列表
+      tags:
+      - SysOperationRecord
+securityDefinitions:
+  ApiKeyAuth:
+    in: header
+    name: x-token
+    type: apiKey
+swagger: "2.0"

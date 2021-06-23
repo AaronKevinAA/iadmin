@@ -1,0 +1,509 @@
+[I-ADMIN]2021/06/16 - 15:01:32.265	[34minfo[0m	E:/Go-project/ginProject/initialize/gorm.go:21	mysql连接成功	{"dsn": "root:@tcp(127.0.0.1:3306)/gin?charset=utf8&parseTime=true"}
+[I-ADMIN]2021/06/16 - 15:05:01.702	[34minfo[0m	E:/Go-project/ginProject/initialize/gorm.go:21	mysql连接成功	{"dsn": "root:@tcp(127.0.0.1:3306)/gin?charset=utf8&parseTime=true"}
+[I-ADMIN]2021/06/16 - 15:05:01.703	[34minfo[0m	E:/Go-project/ginProject/initialize/redis.go:20	redis connect ping response:	{"redisCfg": {"db":0,"addr":"127.0.0.1:6379","password":""}}
+[I-ADMIN]2021/06/16 - 15:07:16.704	[34minfo[0m	E:/Go-project/ginProject/initialize/gorm.go:21	mysql 连接成功	{"dsn": "root:@tcp(127.0.0.1:3306)/gin?charset=utf8&parseTime=true"}
+[I-ADMIN]2021/06/16 - 15:07:16.709	[34minfo[0m	E:/Go-project/ginProject/initialize/redis.go:20	redis 连接成功:	{"redisCfg": {"db":0,"addr":"127.0.0.1:6379","password":""}}
+[I-ADMIN]2021/06/16 - 15:07:16.710	[34minfo[0m	E:/Go-project/ginProject/core/server.go:28	server run success on http://127.0.0.1:8991
+[I-ADMIN]2021/06/16 - 15:07:16.710	[34minfo[0m	E:/Go-project/ginProject/core/server.go:29	swagger page on http://127.0.0.1:8991/swagger/index.html
+[I-ADMIN]2021/06/16 - 15:08:11.844	[34minfo[0m	E:/Go-project/ginProject/initialize/gorm.go:21	mysql 连接成功	{"dsn": "root:@tcp(127.0.0.1:3306)/gin?charset=utf8&parseTime=true"}
+[I-ADMIN]2021/06/16 - 15:08:11.846	[34minfo[0m	E:/Go-project/ginProject/initialize/redis.go:20	redis 连接成功:	{"redisCfg": {"db":0,"addr":"127.0.0.1:6379","password":""}}
+[I-ADMIN]2021/06/16 - 15:08:11.847	[34minfo[0m	E:/Go-project/ginProject/initialize/router.go:19	swagger注册成功,swagger页面为：/swagger/index.html
+[I-ADMIN]2021/06/16 - 15:08:11.847	[34minfo[0m	E:/Go-project/ginProject/initialize/router.go:33	router 注册成功
+[I-ADMIN]2021/06/16 - 15:08:11.862	[34minfo[0m	E:/Go-project/ginProject/core/server.go:28	server run success on http://127.0.0.1:8991
+[I-ADMIN]2021/06/16 - 15:08:11.862	[34minfo[0m	E:/Go-project/ginProject/core/server.go:29	swagger page on http://127.0.0.1:8991/swagger/index.html
+[I-ADMIN]2021/06/16 - 15:22:12.627	[34minfo[0m	E:/Go-project/ginProject/initialize/gorm.go:21	mysql 连接成功	{"dsn": "root:@tcp(127.0.0.1:3306)/gin?charset=utf8&parseTime=true"}
+[I-ADMIN]2021/06/16 - 15:22:12.628	[34minfo[0m	E:/Go-project/ginProject/initialize/redis.go:20	redis 连接成功:	{"redisCfg": {"db":0,"addr":"127.0.0.1:6379","password":""}}
+[I-ADMIN]2021/06/16 - 15:22:12.628	[34minfo[0m	E:/Go-project/ginProject/initialize/router.go:19	swagger注册成功,swagger页面为：/swagger/index.html
+[I-ADMIN]2021/06/16 - 15:22:12.628	[34minfo[0m	E:/Go-project/ginProject/initialize/router.go:34	router 注册成功
+[I-ADMIN]2021/06/16 - 15:22:12.637	[34minfo[0m	E:/Go-project/ginProject/core/server.go:28	server run success on http://127.0.0.1:8991
+[I-ADMIN]2021/06/16 - 15:22:12.637	[34minfo[0m	E:/Go-project/ginProject/core/server.go:29	swagger page on http://127.0.0.1:8991/swagger/index.html
+[I-ADMIN]2021/06/16 - 15:25:36.416	[34minfo[0m	E:/Go-project/ginProject/initialize/gorm.go:21	mysql 连接成功	{"dsn": "root:@tcp(127.0.0.1:3306)/gin?charset=utf8&parseTime=true"}
+[I-ADMIN]2021/06/16 - 15:25:36.418	[34minfo[0m	E:/Go-project/ginProject/initialize/redis.go:20	redis 连接成功:	{"redisCfg": {"db":0,"addr":"127.0.0.1:6379","password":""}}
+[I-ADMIN]2021/06/16 - 15:25:36.418	[34minfo[0m	E:/Go-project/ginProject/initialize/router.go:19	swagger注册成功,swagger页面为：/swagger/index.html
+[I-ADMIN]2021/06/16 - 15:25:36.418	[34minfo[0m	E:/Go-project/ginProject/initialize/router.go:34	router 注册成功
+[I-ADMIN]2021/06/16 - 15:25:36.422	[34minfo[0m	E:/Go-project/ginProject/core/server.go:28	server run success on http://127.0.0.1:8991
+[I-ADMIN]2021/06/16 - 15:25:36.422	[34minfo[0m	E:/Go-project/ginProject/core/server.go:29	swagger page on http://127.0.0.1:8991/swagger/index.html
+[I-ADMIN]2021/06/16 - 15:28:50.397	[34minfo[0m	E:/Go-project/ginProject/initialize/gorm.go:21	mysql 连接成功	{"dsn": "root:@tcp(127.0.0.1:3306)/gin?charset=utf8&parseTime=true"}
+[I-ADMIN]2021/06/16 - 15:28:50.398	[34minfo[0m	E:/Go-project/ginProject/initialize/redis.go:20	redis 连接成功:	{"redisCfg": {"db":0,"addr":"127.0.0.1:6379","password":""}}
+[I-ADMIN]2021/06/16 - 15:28:50.398	[34minfo[0m	E:/Go-project/ginProject/initialize/router.go:19	swagger注册成功,swagger页面为：/swagger/index.html
+[I-ADMIN]2021/06/16 - 15:28:50.398	[34minfo[0m	E:/Go-project/ginProject/initialize/router.go:34	router 注册成功
+[I-ADMIN]2021/06/16 - 15:28:50.402	[34minfo[0m	E:/Go-project/ginProject/core/server.go:28	server run success on http://127.0.0.1:8991
+[I-ADMIN]2021/06/16 - 15:28:50.402	[34minfo[0m	E:/Go-project/ginProject/core/server.go:29	swagger page on http://127.0.0.1:8991/swagger/index.html
+[I-ADMIN]2021/06/16 - 15:38:14.902	[34minfo[0m	E:/Go-project/ginProject/initialize/gorm.go:21	mysql 连接成功	{"dsn": "root:@tcp(127.0.0.1:3306)/gin?charset=utf8&parseTime=true"}
+[I-ADMIN]2021/06/16 - 15:38:14.904	[34minfo[0m	E:/Go-project/ginProject/initialize/redis.go:20	redis 连接成功:	{"redisCfg": {"db":0,"addr":"127.0.0.1:6379","password":""}}
+[I-ADMIN]2021/06/16 - 15:38:14.905	[34minfo[0m	E:/Go-project/ginProject/initialize/router.go:19	swagger注册成功,swagger页面为：/swagger/index.html
+[I-ADMIN]2021/06/16 - 15:38:14.905	[34minfo[0m	E:/Go-project/ginProject/initialize/router.go:34	router 注册成功
+[I-ADMIN]2021/06/16 - 15:38:14.919	[34minfo[0m	E:/Go-project/ginProject/core/server.go:28	server run success on http://127.0.0.1:8991
+[I-ADMIN]2021/06/16 - 15:38:14.919	[34minfo[0m	E:/Go-project/ginProject/core/server.go:29	swagger page on http://127.0.0.1:8991/swagger/index.html
+[I-ADMIN]2021/06/16 - 15:38:21.406	[34minfo[0m	E:/Go-project/ginProject/initialize/gorm.go:21	mysql 连接成功	{"dsn": "root:@tcp(127.0.0.1:3306)/gin?charset=utf8&parseTime=true"}
+[I-ADMIN]2021/06/16 - 15:38:21.407	[34minfo[0m	E:/Go-project/ginProject/initialize/redis.go:20	redis 连接成功:	{"redisCfg": {"db":0,"addr":"127.0.0.1:6379","password":""}}
+[I-ADMIN]2021/06/16 - 15:38:21.407	[34minfo[0m	E:/Go-project/ginProject/initialize/router.go:19	swagger注册成功,swagger页面为：/swagger/index.html
+[I-ADMIN]2021/06/16 - 15:38:21.407	[34minfo[0m	E:/Go-project/ginProject/initialize/router.go:34	router 注册成功
+[I-ADMIN]2021/06/16 - 15:38:21.418	[34minfo[0m	E:/Go-project/ginProject/core/server.go:28	server run success on http://127.0.0.1:8991
+[I-ADMIN]2021/06/16 - 15:38:21.418	[34minfo[0m	E:/Go-project/ginProject/core/server.go:29	swagger page on http://127.0.0.1:8991/swagger/index.html
+[I-ADMIN]2021/06/16 - 15:38:29.436	[34minfo[0m	E:/Go-project/ginProject/initialize/gorm.go:21	mysql 连接成功	{"dsn": "root:@tcp(127.0.0.1:3306)/gin?charset=utf8&parseTime=true"}
+[I-ADMIN]2021/06/16 - 15:38:29.438	[34minfo[0m	E:/Go-project/ginProject/initialize/redis.go:20	redis 连接成功:	{"redisCfg": {"db":0,"addr":"127.0.0.1:6379","password":""}}
+[I-ADMIN]2021/06/16 - 15:38:29.438	[34minfo[0m	E:/Go-project/ginProject/initialize/router.go:19	swagger注册成功,swagger页面为：/swagger/index.html
+[I-ADMIN]2021/06/16 - 15:38:29.438	[34minfo[0m	E:/Go-project/ginProject/initialize/router.go:34	router 注册成功
+[I-ADMIN]2021/06/16 - 15:38:29.441	[34minfo[0m	E:/Go-project/ginProject/core/server.go:28	server run success on http://127.0.0.1:8991
+[I-ADMIN]2021/06/16 - 15:38:29.441	[34minfo[0m	E:/Go-project/ginProject/core/server.go:29	swagger page on http://127.0.0.1:8991/swagger/index.html
+[I-ADMIN]2021/06/16 - 15:39:08.677	[34minfo[0m	E:/Go-project/ginProject/initialize/gorm.go:21	mysql 连接成功	{"dsn": "root:@tcp(127.0.0.1:3306)/gin?charset=utf8&parseTime=true"}
+[I-ADMIN]2021/06/16 - 15:39:08.678	[34minfo[0m	E:/Go-project/ginProject/initialize/redis.go:20	redis 连接成功:	{"redisCfg": {"db":0,"addr":"127.0.0.1:6379","password":""}}
+[I-ADMIN]2021/06/16 - 15:39:08.679	[34minfo[0m	E:/Go-project/ginProject/initialize/router.go:19	swagger注册成功,swagger页面为：/swagger/index.html
+[I-ADMIN]2021/06/16 - 15:39:08.679	[34minfo[0m	E:/Go-project/ginProject/initialize/router.go:34	router 注册成功
+[I-ADMIN]2021/06/16 - 15:39:08.692	[34minfo[0m	E:/Go-project/ginProject/core/server.go:28	server run success on http://127.0.0.1:8991
+[I-ADMIN]2021/06/16 - 15:39:08.692	[34minfo[0m	E:/Go-project/ginProject/core/server.go:29	swagger page on http://127.0.0.1:8991/swagger/index.html
+[I-ADMIN]2021/06/16 - 15:39:16.276	[34minfo[0m	E:/Go-project/ginProject/initialize/gorm.go:21	mysql 连接成功	{"dsn": "root:@tcp(127.0.0.1:3306)/gin?charset=utf8&parseTime=true"}
+[I-ADMIN]2021/06/16 - 15:39:16.277	[34minfo[0m	E:/Go-project/ginProject/initialize/redis.go:20	redis 连接成功:	{"redisCfg": {"db":0,"addr":"127.0.0.1:6379","password":""}}
+[I-ADMIN]2021/06/16 - 15:39:16.278	[34minfo[0m	E:/Go-project/ginProject/initialize/router.go:19	swagger注册成功,swagger页面为：/swagger/index.html
+[I-ADMIN]2021/06/16 - 15:39:16.278	[34minfo[0m	E:/Go-project/ginProject/initialize/router.go:34	router 注册成功
+[I-ADMIN]2021/06/16 - 15:39:16.279	[34minfo[0m	E:/Go-project/ginProject/core/server.go:28	server run success on http://127.0.0.1:8991
+[I-ADMIN]2021/06/16 - 15:39:16.279	[34minfo[0m	E:/Go-project/ginProject/core/server.go:29	swagger page on http://127.0.0.1:8991/swagger/index.html
+[I-ADMIN]2021/06/16 - 15:52:19.629	[34minfo[0m	E:/Go-project/ginProject/initialize/gorm.go:21	mysql 连接成功	{"dsn": "root:@tcp(127.0.0.1:3306)/gin?charset=utf8&parseTime=true"}
+[I-ADMIN]2021/06/16 - 15:52:19.631	[34minfo[0m	E:/Go-project/ginProject/initialize/redis.go:20	redis 连接成功:	{"redisCfg": {"db":0,"addr":"127.0.0.1:6379","password":""}}
+[I-ADMIN]2021/06/16 - 15:52:19.631	[34minfo[0m	E:/Go-project/ginProject/initialize/router.go:19	swagger注册成功,swagger页面为：/swagger/index.html
+[I-ADMIN]2021/06/16 - 15:52:19.632	[34minfo[0m	E:/Go-project/ginProject/initialize/router.go:34	router 注册成功
+[I-ADMIN]2021/06/16 - 15:52:19.634	[34minfo[0m	E:/Go-project/ginProject/core/server.go:28	server run success on http://127.0.0.1:8991
+[I-ADMIN]2021/06/16 - 15:52:19.634	[34minfo[0m	E:/Go-project/ginProject/core/server.go:29	swagger page on http://127.0.0.1:8991/swagger/index.html
+[I-ADMIN]2021/06/16 - 15:55:08.960	[34minfo[0m	E:/Go-project/ginProject/initialize/gorm.go:21	mysql 连接成功	{"dsn": "root:@tcp(127.0.0.1:3306)/gin?charset=utf8&parseTime=true"}
+ginProject/initialize.GormMysql
+	E:/Go-project/ginProject/initialize/gorm.go:21
+main.main
+	E:/Go-project/ginProject/main.go:24
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 15:55:08.962	[34minfo[0m	E:/Go-project/ginProject/initialize/redis.go:20	redis 连接成功:	{"redisCfg": {"db":0,"addr":"127.0.0.1:6379","password":""}}
+ginProject/initialize.Redis
+	E:/Go-project/ginProject/initialize/redis.go:20
+ginProject/core.RunWindowsServer
+	E:/Go-project/ginProject/core/server.go:18
+main.main
+	E:/Go-project/ginProject/main.go:26
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 15:55:08.962	[34minfo[0m	E:/Go-project/ginProject/initialize/router.go:19	swagger注册成功,swagger页面为：/swagger/index.html
+ginProject/initialize.Router
+	E:/Go-project/ginProject/initialize/router.go:19
+ginProject/core.RunWindowsServer
+	E:/Go-project/ginProject/core/server.go:20
+main.main
+	E:/Go-project/ginProject/main.go:26
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 15:55:08.962	[34minfo[0m	E:/Go-project/ginProject/initialize/router.go:34	router 注册成功
+ginProject/initialize.Router
+	E:/Go-project/ginProject/initialize/router.go:34
+ginProject/core.RunWindowsServer
+	E:/Go-project/ginProject/core/server.go:20
+main.main
+	E:/Go-project/ginProject/main.go:26
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 15:55:08.966	[34minfo[0m	E:/Go-project/ginProject/core/server.go:28	server run success on http://127.0.0.1:8991
+ginProject/core.RunWindowsServer
+	E:/Go-project/ginProject/core/server.go:28
+main.main
+	E:/Go-project/ginProject/main.go:26
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 15:55:08.966	[34minfo[0m	E:/Go-project/ginProject/core/server.go:29	swagger page on http://127.0.0.1:8991/swagger/index.html
+ginProject/core.RunWindowsServer
+	E:/Go-project/ginProject/core/server.go:29
+main.main
+	E:/Go-project/ginProject/main.go:26
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 15:59:24.227	[34minfo[0m	E:/Go-project/ginProject/initialize/gorm.go:21	mysql 连接成功	{"dsn": "root:@tcp(127.0.0.1:3306)/gin?charset=utf8&parseTime=true"}
+ginProject/initialize.GormMysql
+	E:/Go-project/ginProject/initialize/gorm.go:21
+main.main
+	E:/Go-project/ginProject/main.go:24
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 15:59:24.229	[34minfo[0m	E:/Go-project/ginProject/initialize/redis.go:20	redis 连接成功:	{"redisCfg": {"db":0,"addr":"127.0.0.1:6379","password":""}}
+ginProject/initialize.Redis
+	E:/Go-project/ginProject/initialize/redis.go:20
+ginProject/core.RunWindowsServer
+	E:/Go-project/ginProject/core/server.go:18
+main.main
+	E:/Go-project/ginProject/main.go:26
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 15:59:24.229	[34minfo[0m	E:/Go-project/ginProject/initialize/router.go:19	swagger注册成功,swagger页面为：/swagger/index.html
+ginProject/initialize.Router
+	E:/Go-project/ginProject/initialize/router.go:19
+ginProject/core.RunWindowsServer
+	E:/Go-project/ginProject/core/server.go:20
+main.main
+	E:/Go-project/ginProject/main.go:26
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 15:59:24.229	[34minfo[0m	E:/Go-project/ginProject/initialize/router.go:34	router 注册成功
+ginProject/initialize.Router
+	E:/Go-project/ginProject/initialize/router.go:34
+ginProject/core.RunWindowsServer
+	E:/Go-project/ginProject/core/server.go:20
+main.main
+	E:/Go-project/ginProject/main.go:26
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 15:59:24.233	[34minfo[0m	E:/Go-project/ginProject/core/server.go:28	server run success on http://127.0.0.1:8991
+ginProject/core.RunWindowsServer
+	E:/Go-project/ginProject/core/server.go:28
+main.main
+	E:/Go-project/ginProject/main.go:26
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 15:59:24.233	[34minfo[0m	E:/Go-project/ginProject/core/server.go:29	swagger page on http://127.0.0.1:8991/swagger/index.html
+ginProject/core.RunWindowsServer
+	E:/Go-project/ginProject/core/server.go:29
+main.main
+	E:/Go-project/ginProject/main.go:26
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 16:08:50.393	[34minfo[0m	E:/Go-project/ginProject/initialize/gorm.go:21	mysql 连接成功	{"dsn": "root:@tcp(127.0.0.1:3306)/gin?charset=utf8&parseTime=true"}
+ginProject/initialize.GormMysql
+	E:/Go-project/ginProject/initialize/gorm.go:21
+main.main
+	E:/Go-project/ginProject/main.go:24
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 16:08:50.394	[34minfo[0m	E:/Go-project/ginProject/initialize/redis.go:20	redis 连接成功:	{"redisCfg": {"db":0,"addr":"127.0.0.1:6379","password":""}}
+ginProject/initialize.Redis
+	E:/Go-project/ginProject/initialize/redis.go:20
+ginProject/core.RunWindowsServer
+	E:/Go-project/ginProject/core/server.go:18
+main.main
+	E:/Go-project/ginProject/main.go:26
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 16:08:50.395	[34minfo[0m	E:/Go-project/ginProject/initialize/router.go:19	swagger注册成功,swagger页面为：/swagger/index.html
+ginProject/initialize.Router
+	E:/Go-project/ginProject/initialize/router.go:19
+ginProject/core.RunWindowsServer
+	E:/Go-project/ginProject/core/server.go:20
+main.main
+	E:/Go-project/ginProject/main.go:26
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 16:08:50.395	[34minfo[0m	E:/Go-project/ginProject/initialize/router.go:34	router 注册成功
+ginProject/initialize.Router
+	E:/Go-project/ginProject/initialize/router.go:34
+ginProject/core.RunWindowsServer
+	E:/Go-project/ginProject/core/server.go:20
+main.main
+	E:/Go-project/ginProject/main.go:26
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 16:08:50.410	[34minfo[0m	E:/Go-project/ginProject/core/server.go:28	server run success on http://127.0.0.1:8991
+ginProject/core.RunWindowsServer
+	E:/Go-project/ginProject/core/server.go:28
+main.main
+	E:/Go-project/ginProject/main.go:26
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 16:08:50.410	[34minfo[0m	E:/Go-project/ginProject/core/server.go:29	swagger page on http://127.0.0.1:8991/swagger/index.html
+ginProject/core.RunWindowsServer
+	E:/Go-project/ginProject/core/server.go:29
+main.main
+	E:/Go-project/ginProject/main.go:26
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 16:09:06.645	[31merror[0m	E:/Go-project/ginProject/middleware/operation.go:69	create operation record error:	{"err": "Error 1054: Unknown column 'created_at' in 'field list'"}
+ginProject/middleware.OperationRecord.func1
+	E:/Go-project/ginProject/middleware/operation.go:69
+github.com/gin-gonic/gin.(*Context).Next
+	E:/Go/bin/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+ginProject/middleware.JWTAuth.func1
+	E:/Go-project/ginProject/middleware/jwt.go:68
+github.com/gin-gonic/gin.(*Context).Next
+	E:/Go/bin/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+ginProject/middleware.Cors.func1
+	E:/Go-project/ginProject/middleware/cors.go:24
+github.com/gin-gonic/gin.(*Context).Next
+	E:/Go/bin/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	E:/Go/bin/pkg/mod/github.com/gin-gonic/gin@v1.7.2/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	E:/Go/bin/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	E:/Go/bin/pkg/mod/github.com/gin-gonic/gin@v1.7.2/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	E:/Go/bin/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	E:/Go/bin/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:489
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	E:/Go/bin/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:445
+net/http.serverHandler.ServeHTTP
+	E:/Go/src/net/http/server.go:2887
+net/http.(*conn).serve
+	E:/Go/src/net/http/server.go:1952
+[I-ADMIN]2021/06/16 - 16:10:27.575	[31merror[0m	E:/Go-project/ginProject/middleware/operation.go:69	create operation record error:	{"err": "Error 1054: Unknown column 'method' in 'field list'"}
+ginProject/middleware.OperationRecord.func1
+	E:/Go-project/ginProject/middleware/operation.go:69
+github.com/gin-gonic/gin.(*Context).Next
+	E:/Go/bin/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+ginProject/middleware.JWTAuth.func1
+	E:/Go-project/ginProject/middleware/jwt.go:68
+github.com/gin-gonic/gin.(*Context).Next
+	E:/Go/bin/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+ginProject/middleware.Cors.func1
+	E:/Go-project/ginProject/middleware/cors.go:24
+github.com/gin-gonic/gin.(*Context).Next
+	E:/Go/bin/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	E:/Go/bin/pkg/mod/github.com/gin-gonic/gin@v1.7.2/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	E:/Go/bin/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	E:/Go/bin/pkg/mod/github.com/gin-gonic/gin@v1.7.2/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	E:/Go/bin/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	E:/Go/bin/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:489
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	E:/Go/bin/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:445
+net/http.serverHandler.ServeHTTP
+	E:/Go/src/net/http/server.go:2887
+net/http.(*conn).serve
+	E:/Go/src/net/http/server.go:1952
+[I-ADMIN]2021/06/16 - 16:19:06.912	[34minfo[0m	E:/Go-project/ginProject/initialize/gorm.go:21	mysql 连接成功	{"dsn": "root:@tcp(127.0.0.1:3306)/gin?charset=utf8&parseTime=true"}
+ginProject/initialize.GormMysql
+	E:/Go-project/ginProject/initialize/gorm.go:21
+main.main
+	E:/Go-project/ginProject/main.go:24
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 16:19:06.913	[34minfo[0m	E:/Go-project/ginProject/initialize/redis.go:20	redis 连接成功:	{"redisCfg": {"db":0,"addr":"127.0.0.1:6379","password":""}}
+ginProject/initialize.Redis
+	E:/Go-project/ginProject/initialize/redis.go:20
+ginProject/core.RunWindowsServer
+	E:/Go-project/ginProject/core/server.go:18
+main.main
+	E:/Go-project/ginProject/main.go:26
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 16:19:06.914	[34minfo[0m	E:/Go-project/ginProject/initialize/router.go:19	swagger注册成功,swagger页面为：/swagger/index.html
+ginProject/initialize.Router
+	E:/Go-project/ginProject/initialize/router.go:19
+ginProject/core.RunWindowsServer
+	E:/Go-project/ginProject/core/server.go:20
+main.main
+	E:/Go-project/ginProject/main.go:26
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 16:19:06.914	[34minfo[0m	E:/Go-project/ginProject/initialize/router.go:34	router 注册成功
+ginProject/initialize.Router
+	E:/Go-project/ginProject/initialize/router.go:34
+ginProject/core.RunWindowsServer
+	E:/Go-project/ginProject/core/server.go:20
+main.main
+	E:/Go-project/ginProject/main.go:26
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 16:19:06.926	[34minfo[0m	E:/Go-project/ginProject/core/server.go:28	server run success on http://127.0.0.1:8991
+ginProject/core.RunWindowsServer
+	E:/Go-project/ginProject/core/server.go:28
+main.main
+	E:/Go-project/ginProject/main.go:26
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 16:19:06.927	[34minfo[0m	E:/Go-project/ginProject/core/server.go:29	swagger page on http://127.0.0.1:8991/swagger/index.html
+ginProject/core.RunWindowsServer
+	E:/Go-project/ginProject/core/server.go:29
+main.main
+	E:/Go-project/ginProject/main.go:26
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 23:08:35.661	[34minfo[0m	E:/Go-project/ginProject/initialize/gorm.go:21	mysql 连接成功	{"dsn": "root:@tcp(127.0.0.1:3306)/gin?charset=utf8&parseTime=true"}
+ginProject/initialize.GormMysql
+	E:/Go-project/ginProject/initialize/gorm.go:21
+main.main
+	E:/Go-project/ginProject/main.go:24
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 23:08:35.663	[34minfo[0m	E:/Go-project/ginProject/initialize/redis.go:20	redis 连接成功:	{"redisCfg": {"db":0,"addr":"127.0.0.1:6379","password":""}}
+ginProject/initialize.Redis
+	E:/Go-project/ginProject/initialize/redis.go:20
+ginProject/core.RunWindowsServer
+	E:/Go-project/ginProject/core/server.go:18
+main.main
+	E:/Go-project/ginProject/main.go:26
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 23:08:35.663	[34minfo[0m	E:/Go-project/ginProject/initialize/router.go:19	swagger注册成功,swagger页面为：/swagger/index.html
+ginProject/initialize.Router
+	E:/Go-project/ginProject/initialize/router.go:19
+ginProject/core.RunWindowsServer
+	E:/Go-project/ginProject/core/server.go:20
+main.main
+	E:/Go-project/ginProject/main.go:26
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 23:08:35.663	[34minfo[0m	E:/Go-project/ginProject/initialize/router.go:35	router 注册成功
+ginProject/initialize.Router
+	E:/Go-project/ginProject/initialize/router.go:35
+ginProject/core.RunWindowsServer
+	E:/Go-project/ginProject/core/server.go:20
+main.main
+	E:/Go-project/ginProject/main.go:26
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 23:08:35.664	[34minfo[0m	E:/Go-project/ginProject/core/server.go:28	server run success on http://127.0.0.1:8991
+ginProject/core.RunWindowsServer
+	E:/Go-project/ginProject/core/server.go:28
+main.main
+	E:/Go-project/ginProject/main.go:26
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 23:08:35.664	[34minfo[0m	E:/Go-project/ginProject/core/server.go:29	swagger page on http://127.0.0.1:8991/swagger/index.html
+ginProject/core.RunWindowsServer
+	E:/Go-project/ginProject/core/server.go:29
+main.main
+	E:/Go-project/ginProject/main.go:26
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 23:09:27.276	[34minfo[0m	E:/Go-project/ginProject/initialize/gorm.go:21	mysql 连接成功	{"dsn": "root:@tcp(127.0.0.1:3306)/gin?charset=utf8&parseTime=true"}
+ginProject/initialize.GormMysql
+	E:/Go-project/ginProject/initialize/gorm.go:21
+main.main
+	E:/Go-project/ginProject/main.go:24
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 23:09:27.277	[34minfo[0m	E:/Go-project/ginProject/initialize/redis.go:20	redis 连接成功:	{"redisCfg": {"db":0,"addr":"127.0.0.1:6379","password":""}}
+ginProject/initialize.Redis
+	E:/Go-project/ginProject/initialize/redis.go:20
+ginProject/core.RunWindowsServer
+	E:/Go-project/ginProject/core/server.go:18
+main.main
+	E:/Go-project/ginProject/main.go:26
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 23:09:27.278	[34minfo[0m	E:/Go-project/ginProject/initialize/router.go:19	swagger注册成功,swagger页面为：/swagger/index.html
+ginProject/initialize.Router
+	E:/Go-project/ginProject/initialize/router.go:19
+ginProject/core.RunWindowsServer
+	E:/Go-project/ginProject/core/server.go:20
+main.main
+	E:/Go-project/ginProject/main.go:26
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 23:09:27.278	[34minfo[0m	E:/Go-project/ginProject/initialize/router.go:35	router 注册成功
+ginProject/initialize.Router
+	E:/Go-project/ginProject/initialize/router.go:35
+ginProject/core.RunWindowsServer
+	E:/Go-project/ginProject/core/server.go:20
+main.main
+	E:/Go-project/ginProject/main.go:26
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 23:09:27.280	[34minfo[0m	E:/Go-project/ginProject/core/server.go:28	server run success on http://127.0.0.1:8991
+ginProject/core.RunWindowsServer
+	E:/Go-project/ginProject/core/server.go:28
+main.main
+	E:/Go-project/ginProject/main.go:26
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 23:09:27.280	[34minfo[0m	E:/Go-project/ginProject/core/server.go:29	swagger page on http://127.0.0.1:8991/swagger/index.html
+ginProject/core.RunWindowsServer
+	E:/Go-project/ginProject/core/server.go:29
+main.main
+	E:/Go-project/ginProject/main.go:26
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 23:09:33.010	[34minfo[0m	E:/Go-project/ginProject/initialize/gorm.go:21	mysql 连接成功	{"dsn": "root:@tcp(127.0.0.1:3306)/gin?charset=utf8&parseTime=true"}
+ginProject/initialize.GormMysql
+	E:/Go-project/ginProject/initialize/gorm.go:21
+main.main
+	E:/Go-project/ginProject/main.go:24
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 23:09:33.011	[34minfo[0m	E:/Go-project/ginProject/initialize/redis.go:20	redis 连接成功:	{"redisCfg": {"db":0,"addr":"127.0.0.1:6379","password":""}}
+ginProject/initialize.Redis
+	E:/Go-project/ginProject/initialize/redis.go:20
+ginProject/core.RunWindowsServer
+	E:/Go-project/ginProject/core/server.go:18
+main.main
+	E:/Go-project/ginProject/main.go:26
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 23:09:33.011	[34minfo[0m	E:/Go-project/ginProject/initialize/router.go:19	swagger注册成功,swagger页面为：/swagger/index.html
+ginProject/initialize.Router
+	E:/Go-project/ginProject/initialize/router.go:19
+ginProject/core.RunWindowsServer
+	E:/Go-project/ginProject/core/server.go:20
+main.main
+	E:/Go-project/ginProject/main.go:26
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 23:09:33.011	[34minfo[0m	E:/Go-project/ginProject/initialize/router.go:35	router 注册成功
+ginProject/initialize.Router
+	E:/Go-project/ginProject/initialize/router.go:35
+ginProject/core.RunWindowsServer
+	E:/Go-project/ginProject/core/server.go:20
+main.main
+	E:/Go-project/ginProject/main.go:26
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 23:09:33.026	[34minfo[0m	E:/Go-project/ginProject/core/server.go:28	server run success on http://127.0.0.1:8991
+ginProject/core.RunWindowsServer
+	E:/Go-project/ginProject/core/server.go:28
+main.main
+	E:/Go-project/ginProject/main.go:26
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 23:09:33.026	[34minfo[0m	E:/Go-project/ginProject/core/server.go:29	swagger page on http://127.0.0.1:8991/swagger/index.html
+ginProject/core.RunWindowsServer
+	E:/Go-project/ginProject/core/server.go:29
+main.main
+	E:/Go-project/ginProject/main.go:26
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 23:59:20.907	[34minfo[0m	E:/Go-project/ginProject/initialize/gorm.go:21	mysql 连接成功	{"dsn": "root:@tcp(127.0.0.1:3306)/gin?charset=utf8&parseTime=true"}
+ginProject/initialize.GormMysql
+	E:/Go-project/ginProject/initialize/gorm.go:21
+main.main
+	E:/Go-project/ginProject/main.go:24
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 23:59:20.909	[34minfo[0m	E:/Go-project/ginProject/initialize/redis.go:20	redis 连接成功:	{"redisCfg": {"db":0,"addr":"127.0.0.1:6379","password":""}}
+ginProject/initialize.Redis
+	E:/Go-project/ginProject/initialize/redis.go:20
+ginProject/core.RunWindowsServer
+	E:/Go-project/ginProject/core/server.go:18
+main.main
+	E:/Go-project/ginProject/main.go:26
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 23:59:20.910	[34minfo[0m	E:/Go-project/ginProject/initialize/router.go:19	swagger注册成功,swagger页面为：/swagger/index.html
+ginProject/initialize.Router
+	E:/Go-project/ginProject/initialize/router.go:19
+ginProject/core.RunWindowsServer
+	E:/Go-project/ginProject/core/server.go:20
+main.main
+	E:/Go-project/ginProject/main.go:26
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 23:59:20.910	[34minfo[0m	E:/Go-project/ginProject/initialize/router.go:35	router 注册成功
+ginProject/initialize.Router
+	E:/Go-project/ginProject/initialize/router.go:35
+ginProject/core.RunWindowsServer
+	E:/Go-project/ginProject/core/server.go:20
+main.main
+	E:/Go-project/ginProject/main.go:26
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 23:59:20.911	[34minfo[0m	E:/Go-project/ginProject/core/server.go:28	server run success on http://127.0.0.1:8991
+ginProject/core.RunWindowsServer
+	E:/Go-project/ginProject/core/server.go:28
+main.main
+	E:/Go-project/ginProject/main.go:26
+runtime.main
+	E:/Go/src/runtime/proc.go:225
+[I-ADMIN]2021/06/16 - 23:59:20.911	[34minfo[0m	E:/Go-project/ginProject/core/server.go:29	swagger page on http://127.0.0.1:8991/swagger/index.html
+ginProject/core.RunWindowsServer
+	E:/Go-project/ginProject/core/server.go:29
+main.main
+	E:/Go-project/ginProject/main.go:26
+runtime.main
+	E:/Go/src/runtime/proc.go:225
