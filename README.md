@@ -1,6 +1,12 @@
-# Version 1.0.0 顶层设计
+# 顶层设计
 
 感谢 [gin-vue-admin](https://www.gin-vue-admin.com/)
+
+---
+
+## **已部署上线**
+
+ [在线预览](http://iadmin.xyz/)
 
 ## 前端框架
 
@@ -25,7 +31,7 @@
 
 - Redis
 
-    目前只有开启多点登录拦截时才会用到Redis
+    目前只有开启多点登录拦截时才会启动Redis
 
 - JWT
 - Swagger2
