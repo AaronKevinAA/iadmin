@@ -8,6 +8,8 @@
 
  [在线预览](http://iadmin.xyz/)
 
+测试账号：12312312312 测试密码：123
+
 ## 前端框架
 
 1. Vue3.0，官方文档：[https://v3.cn.vuejs.org/guide/migration/introduction.html#概览](https://v3.cn.vuejs.org/guide/migration/introduction.html#%E6%A6%82%E8%A7%88)
