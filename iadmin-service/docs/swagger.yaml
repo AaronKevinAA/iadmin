@@ -19,11 +19,11 @@ definitions:
     type: object
   model.SysMenu:
     properties:
+      Component:
+        type: string
       created_at:
         type: integer
       full_page:
-        type: boolean
-      has_authority:
         type: boolean
       icon:
         type: string
@@ -36,7 +36,7 @@ definitions:
       name:
         type: string
       order:
-        type: integer
+        type: string
       parentId:
         description: 父菜单ID
         type: integer
@@ -49,8 +49,6 @@ definitions:
         type: string
       updated_at:
         type: integer
-      view_path:
-        type: string
     type: object
   model.SysOperationRecord:
     properties:
@@ -95,12 +93,11 @@ definitions:
     type: object
   model.SysRole:
     properties:
-      apis:
-        items:
-          $ref: '#/definitions/model.SysApi'
-        type: array
       created_at:
         type: integer
+      default_router:
+        description: 首页路径(默认/index)
+        type: string
       id:
         type: integer
       menus:
@@ -128,6 +125,25 @@ definitions:
         type: integer
       updated_at:
         type: integer
+    type: object
+  request.CasbinInReceive:
+    properties:
+      casbinInfos:
+        items:
+          $ref: '#/definitions/request.CasbinInfo'
+        type: array
+      roleId:
+        description: 权限id
+        type: string
+    type: object
+  request.CasbinInfo:
+    properties:
+      method:
+        description: 方法
+        type: string
+      path:
+        description: 路径
+        type: string
     type: object
   request.IdsReq:
     properties:
@@ -206,12 +222,10 @@ definitions:
         description: 请求状态
         type: string
     type: object
-  request.SysRoleApiConfig:
+  request.SysRoleDefaultRouter:
     properties:
-      apis:
-        items:
-          $ref: '#/definitions/model.SysApi'
-        type: array
+      default_router:
+        type: string
       role_id:
         type: integer
     type: object
@@ -295,6 +309,74 @@ paths:
       summary: 用户注册
       tags:
       - Base
+  /api/casbin/getPolicyPathByRoleId:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 权限id, 权限模型列表
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/request.CasbinInReceive'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 获取权限列表
+      tags:
+      - Casbin
+  /api/casbin/updateCasbin:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 权限id, 权限模型列表
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/request.CasbinInReceive'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"更新成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 更新角色api权限
+      tags:
+      - Casbin
+  /api/file/upload:
+    post:
+      consumes:
+      - multipart/form-data
+      parameters:
+      - description: 上传文件
+        in: formData
+        name: file
+        required: true
+        type: file
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"上传成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 上传文件
+      tags:
+      - File
   /api/sysApi/addSysApiInfo:
     post:
       consumes:
@@ -575,17 +657,17 @@ paths:
       summary: 分页获取角色列表
       tags:
       - SysRole
-  /api/sysRole/updateSysRoleApiConfig:
+  /api/sysRole/setRoleDefaultRouter:
     put:
       consumes:
       - application/json
       parameters:
-      - description: role_id,id列表
+      - description: role_id,default_router
         in: body
         name: data
         required: true
         schema:
-          $ref: '#/definitions/request.SysRoleApiConfig'
+          $ref: '#/definitions/request.SysRoleDefaultRouter'
       produces:
       - application/json
       responses:
@@ -595,7 +677,7 @@ paths:
             type: string
       security:
       - ApiKeyAuth: []
-      summary: 配置角色接口
+      summary: 配置角色菜单首页
       tags:
       - SysRole
   /api/sysRole/updateSysRoleInfo:

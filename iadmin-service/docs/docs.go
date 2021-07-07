@@ -106,6 +106,118 @@ var doc = `{
                 }
             }
         },
+        "/api/casbin/getPolicyPathByRoleId": {
+            "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Casbin"
+                ],
+                "summary": "获取权限列表",
+                "parameters": [
+                    {
+                        "description": "权限id, 权限模型列表",
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/request.CasbinInReceive"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{\"success\":true,\"data\":{},\"msg\":\"获取成功\"}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/casbin/updateCasbin": {
+            "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Casbin"
+                ],
+                "summary": "更新角色api权限",
+                "parameters": [
+                    {
+                        "description": "权限id, 权限模型列表",
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/request.CasbinInReceive"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{\"success\":true,\"data\":{},\"msg\":\"更新成功\"}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/file/upload": {
+            "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "File"
+                ],
+                "summary": "上传文件",
+                "parameters": [
+                    {
+                        "type": "file",
+                        "description": "上传文件",
+                        "name": "file",
+                        "in": "formData",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{\"success\":true,\"data\":{},\"msg\":\"上传成功\"}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
         "/api/sysApi/addSysApiInfo": {
             "post": {
                 "security": [
@@ -570,7 +682,7 @@ var doc = `{
                 }
             }
         },
-        "/api/sysRole/updateSysRoleApiConfig": {
+        "/api/sysRole/setRoleDefaultRouter": {
             "put": {
                 "security": [
                     {
@@ -586,15 +698,15 @@ var doc = `{
                 "tags": [
                     "SysRole"
                 ],
-                "summary": "配置角色接口",
+                "summary": "配置角色菜单首页",
                 "parameters": [
                     {
-                        "description": "role_id,id列表",
+                        "description": "role_id,default_router",
                         "name": "data",
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/request.SysRoleApiConfig"
+                            "$ref": "#/definitions/request.SysRoleDefaultRouter"
                         }
                     }
                 ],
@@ -1057,13 +1169,13 @@ var doc = `{
         "model.SysMenu": {
             "type": "object",
             "properties": {
+                "Component": {
+                    "type": "string"
+                },
                 "created_at": {
                     "type": "integer"
                 },
                 "full_page": {
-                    "type": "boolean"
-                },
-                "has_authority": {
                     "type": "boolean"
                 },
                 "icon": {
@@ -1082,7 +1194,7 @@ var doc = `{
                     "type": "string"
                 },
                 "order": {
-                    "type": "integer"
+                    "type": "string"
                 },
                 "parentId": {
                     "description": "父菜单ID",
@@ -1100,9 +1212,6 @@ var doc = `{
                 },
                 "updated_at": {
                     "type": "integer"
-                },
-                "view_path": {
-                    "type": "string"
                 }
             }
         },
@@ -1166,14 +1275,12 @@ var doc = `{
         "model.SysRole": {
             "type": "object",
             "properties": {
-                "apis": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/model.SysApi"
-                    }
-                },
                 "created_at": {
                     "type": "integer"
+                },
+                "default_router": {
+                    "description": "首页路径(默认/index)",
+                    "type": "string"
                 },
                 "id": {
                     "type": "integer"
@@ -1215,6 +1322,34 @@ var doc = `{
                 },
                 "updated_at": {
                     "type": "integer"
+                }
+            }
+        },
+        "request.CasbinInReceive": {
+            "type": "object",
+            "properties": {
+                "casbinInfos": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/request.CasbinInfo"
+                    }
+                },
+                "roleId": {
+                    "description": "权限id",
+                    "type": "string"
+                }
+            }
+        },
+        "request.CasbinInfo": {
+            "type": "object",
+            "properties": {
+                "method": {
+                    "description": "方法",
+                    "type": "string"
+                },
+                "path": {
+                    "description": "路径",
+                    "type": "string"
                 }
             }
         },
@@ -1333,14 +1468,11 @@ var doc = `{
                 }
             }
         },
-        "request.SysRoleApiConfig": {
+        "request.SysRoleDefaultRouter": {
             "type": "object",
             "properties": {
-                "apis": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/model.SysApi"
-                    }
+                "default_router": {
+                    "type": "string"
                 },
                 "role_id": {
                     "type": "integer"

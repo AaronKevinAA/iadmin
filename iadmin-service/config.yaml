@@ -31,6 +31,7 @@ mysql:
 
 # system configuration
 system:
+  env: 'public'  # Change to "develop" to skip authentication for development mode
   addr: 8991
   use-multipoint: true    # 多点登录拦截，true为拦截，false为不拦截
 
@@ -45,3 +46,13 @@ zap:
   encode-level: 'LowercaseColorLevelEncoder'
   stacktrace-key: 'stacktrace'
   log-in-console: true
+
+# casbin configuration
+casbin:
+  model-path: './resource/rbac_model.conf'
+
+file:
+  # 允许上传的最大文件大小 3M
+  max-upload-size: 3145728
+  file-local-url: './uploads/file'
+  allow-file-type: 'jpg|png'

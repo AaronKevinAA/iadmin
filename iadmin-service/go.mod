@@ -4,6 +4,8 @@ go 1.16
 
 require (
 	github.com/alecthomas/template v0.0.0-20190718012654-fb15b899a751
+	github.com/casbin/casbin/v2 v2.31.8 // indirect
+	github.com/casbin/gorm-adapter/v3 v3.3.1 // indirect
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible // indirect
 	github.com/fsnotify/fsnotify v1.4.9 // indirect
 	github.com/fvbock/endless v0.0.0-20170109170031-447134032cb6 // indirect
@@ -16,7 +18,6 @@ require (
 	github.com/go-sql-driver/mysql v1.6.0
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/gomodule/redigo v1.8.5 // indirect
-	github.com/jinzhu/gorm v1.9.16
 	github.com/json-iterator/go v1.1.11 // indirect
 	github.com/leodido/go-urn v1.2.1 // indirect
 	github.com/lestrrat-go/file-rotatelogs v2.4.0+incompatible // indirect

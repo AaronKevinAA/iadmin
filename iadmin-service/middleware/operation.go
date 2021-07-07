@@ -9,7 +9,6 @@ import (
 	"github.com/gin-gonic/gin"
 	"go.uber.org/zap"
 	"io/ioutil"
-	"log"
 	"net/http"
 	"strconv"
 	"time"
@@ -66,7 +65,6 @@ func OperationRecord() gin.HandlerFunc {
 		record.Latency = latency
 		record.Resp = writer.body.String()
 
-		log.Println(c.Request.Method)
 		if err := service.CreateSysOperationRecord(record); err != nil {
 			global.GvaLog.Error("create operation record error:", zap.Any("err", err))
 		}

@@ -1,7 +1,7 @@
 package utils
 
 const (
-	ConfigEnv  = "GVA_CONFIG"
-	ConfigFile = "config.nginx.yaml"
+	ConfigEnv       = "GVA_CONFIG"
+	ConfigFile      = "config.yaml"
 	DefaultPassword = "123456"
 )
