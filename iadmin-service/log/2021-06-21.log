@@ -1,6 +1,0 @@
-[I-ADMIN]2021/06/21 - 01:11:12.151	[34minfo[0m	E:/Go-project/ginProject/initialize/gorm.go:21	mysql 连接成功	{"dsn": "root:@tcp(127.0.0.1:3306)/gin?charset=utf8&parseTime=true"}
-[I-ADMIN]2021/06/21 - 01:11:14.205	[31merror[0m	E:/Go-project/ginProject/initialize/redis.go:18	redis 连接失败, err:	{"err": "dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it."}
-[I-ADMIN]2021/06/21 - 01:11:14.206	[34minfo[0m	E:/Go-project/ginProject/initialize/router.go:19	swagger注册成功,swagger页面为：/swagger/index.html
-[I-ADMIN]2021/06/21 - 01:11:14.212	[34minfo[0m	E:/Go-project/ginProject/initialize/router.go:37	router 注册成功
-[I-ADMIN]2021/06/21 - 01:11:14.220	[34minfo[0m	E:/Go-project/ginProject/core/server.go:28	server run success on http://127.0.0.1:8991
-[I-ADMIN]2021/06/21 - 01:11:14.228	[34minfo[0m	E:/Go-project/ginProject/core/server.go:29	swagger page on http://127.0.0.1:8991/swagger/index.html

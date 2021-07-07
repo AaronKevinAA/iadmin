@@ -1,0 +1,86 @@
+[I-ADMIN]2021/07/06 - 00:18:13.942	[31merror[0m	E:/iadmin/iadmin-service/api/v1/file_upload_download.go:31	上传文件失败!	{"err": "文件过大！"}
+[I-ADMIN]2021/07/06 - 00:18:14.295	[31merror[0m	E:/iadmin/iadmin-service/middleware/operation.go:71	create operation record error:	{"err": "Error 1105: Parameter of prepared statement which is set through mysql_send_long_data() is longer than 'max_allowed_packet' bytes"}
+[I-ADMIN]2021/07/06 - 00:21:14.816	[31merror[0m	E:/iadmin/iadmin-service/api/v1/file_upload_download.go:31	上传文件失败!	{"err": "文件过大！"}
+[I-ADMIN]2021/07/06 - 00:21:15.008	[31merror[0m	E:/iadmin/iadmin-service/middleware/operation.go:71	create operation record error:	{"err": "Error 1105: Parameter of prepared statement which is set through mysql_send_long_data() is longer than 'max_allowed_packet' bytes"}
+[I-ADMIN]2021/07/06 - 00:21:41.008	[31merror[0m	E:/iadmin/iadmin-service/api/v1/file_upload_download.go:31	上传文件失败!	{"err": "文件过大！"}
+[I-ADMIN]2021/07/06 - 00:21:41.193	[31merror[0m	E:/iadmin/iadmin-service/middleware/operation.go:71	create operation record error:	{"err": "Error 1105: Parameter of prepared statement which is set through mysql_send_long_data() is longer than 'max_allowed_packet' bytes"}
+[I-ADMIN]2021/07/06 - 00:24:45.202	[31merror[0m	E:/iadmin/iadmin-service/api/v1/file_upload_download.go:31	上传文件失败!	{"err": "文件过大！"}
+[I-ADMIN]2021/07/06 - 00:24:45.355	[31merror[0m	E:/iadmin/iadmin-service/middleware/operation.go:71	create operation record error:	{"err": "Error 1105: Parameter of prepared statement which is set through mysql_send_long_data() is longer than 'max_allowed_packet' bytes"}
+[I-ADMIN]2021/07/06 - 00:24:58.040	[31merror[0m	E:/iadmin/iadmin-service/api/v1/file_upload_download.go:31	上传文件失败!	{"err": "文件过大！"}
+[I-ADMIN]2021/07/06 - 00:24:58.200	[31merror[0m	E:/iadmin/iadmin-service/middleware/operation.go:71	create operation record error:	{"err": "Error 1105: Parameter of prepared statement which is set through mysql_send_long_data() is longer than 'max_allowed_packet' bytes"}
+[I-ADMIN]2021/07/06 - 00:25:03.496	[31merror[0m	E:/iadmin/iadmin-service/api/v1/file_upload_download.go:31	上传文件失败!	{"err": "文件过大！"}
+[I-ADMIN]2021/07/06 - 00:25:03.669	[31merror[0m	E:/iadmin/iadmin-service/middleware/operation.go:71	create operation record error:	{"err": "Error 1105: Parameter of prepared statement which is set through mysql_send_long_data() is longer than 'max_allowed_packet' bytes"}
+[I-ADMIN]2021/07/06 - 00:39:05.590	[31merror[0m	E:/iadmin/iadmin-service/api/v1/file_upload_download.go:31	上传文件失败!	{"err": "文件过大！"}
+[I-ADMIN]2021/07/06 - 00:39:05.767	[31merror[0m	E:/iadmin/iadmin-service/middleware/operation.go:71	create operation record error:	{"err": "Error 1105: Parameter of prepared statement which is set through mysql_send_long_data() is longer than 'max_allowed_packet' bytes"}
+[I-ADMIN]2021/07/06 - 00:39:23.087	[31merror[0m	E:/iadmin/iadmin-service/api/v1/file_upload_download.go:31	上传文件失败!	{"err": "文件过大！"}
+[I-ADMIN]2021/07/06 - 00:39:23.242	[31merror[0m	E:/iadmin/iadmin-service/middleware/operation.go:71	create operation record error:	{"err": "Error 1105: Parameter of prepared statement which is set through mysql_send_long_data() is longer than 'max_allowed_packet' bytes"}
+[I-ADMIN]2021/07/06 - 00:40:09.023	[31merror[0m	E:/iadmin/iadmin-service/api/v1/file_upload_download.go:31	上传文件失败!	{"err": "文件过大！"}
+[I-ADMIN]2021/07/06 - 00:40:09.187	[31merror[0m	E:/iadmin/iadmin-service/middleware/operation.go:71	create operation record error:	{"err": "Error 1105: Parameter of prepared statement which is set through mysql_send_long_data() is longer than 'max_allowed_packet' bytes"}
+[I-ADMIN]2021/07/06 - 00:42:06.552	[31merror[0m	E:/iadmin/iadmin-service/api/v1/file_upload_download.go:31	上传文件失败!	{"err": "不允许上传此类型的文件！"}
+[I-ADMIN]2021/07/06 - 00:42:16.978	[31merror[0m	E:/iadmin/iadmin-service/api/v1/file_upload_download.go:31	上传文件失败!	{"err": "不允许上传此类型的文件！"}
+[I-ADMIN]2021/07/06 - 00:44:47.228	[31merror[0m	E:/iadmin/iadmin-service/api/v1/file_upload_download.go:31	上传文件失败!	{"err": "不允许上传此类型的文件！"}
+[I-ADMIN]2021/07/06 - 00:49:55.193	[34minfo[0m	E:/iadmin/iadmin-service/initialize/gorm.go:21	mysql 连接成功	{"dsn": "root:@tcp(127.0.0.1:3306)/gin?charset=utf8&parseTime=true"}
+[I-ADMIN]2021/07/06 - 00:49:55.195	[34minfo[0m	E:/iadmin/iadmin-service/initialize/redis.go:20	redis 连接成功:	{"redisCfg": {"db":0,"addr":"127.0.0.1:6379","password":""}}
+[I-ADMIN]2021/07/06 - 00:49:55.195	[34minfo[0m	E:/iadmin/iadmin-service/initialize/router.go:19	swagger注册成功,swagger页面为：/swagger/index.html
+[I-ADMIN]2021/07/06 - 00:49:55.195	[34minfo[0m	E:/iadmin/iadmin-service/initialize/router.go:39	router 注册成功
+[I-ADMIN]2021/07/06 - 00:49:55.212	[34minfo[0m	E:/iadmin/iadmin-service/core/server.go:28	server run success on http://127.0.0.1:8991
+[I-ADMIN]2021/07/06 - 00:49:55.212	[34minfo[0m	E:/iadmin/iadmin-service/core/server.go:29	swagger page on http://127.0.0.1:8991/swagger/index.html
+[I-ADMIN]2021/07/06 - 00:51:32.908	[31merror[0m	E:/iadmin/iadmin-service/api/v1/file_upload_download.go:31	上传文件失败!	{"err": "文件过大！"}
+[I-ADMIN]2021/07/06 - 00:51:33.079	[31merror[0m	E:/iadmin/iadmin-service/middleware/operation.go:71	create operation record error:	{"err": "Error 1105: Parameter of prepared statement which is set through mysql_send_long_data() is longer than 'max_allowed_packet' bytes"}
+[I-ADMIN]2021/07/06 - 00:55:16.601	[31merror[0m	E:/iadmin/iadmin-service/api/v1/file_upload_download.go:31	上传文件失败!	{"err": "文件过大！"}
+[I-ADMIN]2021/07/06 - 00:55:16.754	[31merror[0m	E:/iadmin/iadmin-service/middleware/operation.go:71	create operation record error:	{"err": "Error 1105: Parameter of prepared statement which is set through mysql_send_long_data() is longer than 'max_allowed_packet' bytes"}
+[I-ADMIN]2021/07/06 - 00:55:41.589	[31merror[0m	E:/iadmin/iadmin-service/api/v1/file_upload_download.go:31	上传文件失败!	{"err": "文件过大！"}
+[I-ADMIN]2021/07/06 - 00:55:41.742	[31merror[0m	E:/iadmin/iadmin-service/middleware/operation.go:71	create operation record error:	{"err": "Error 1105: Parameter of prepared statement which is set through mysql_send_long_data() is longer than 'max_allowed_packet' bytes"}
+[I-ADMIN]2021/07/06 - 00:58:20.826	[31merror[0m	E:/iadmin/iadmin-service/api/v1/file_upload_download.go:31	上传文件失败!	{"err": "不允许上传此类型的文件！"}
+[I-ADMIN]2021/07/06 - 00:59:09.465	[31merror[0m	E:/iadmin/iadmin-service/api/v1/file_upload_download.go:31	上传文件失败!	{"err": "文件过大！"}
+[I-ADMIN]2021/07/06 - 00:59:09.621	[31merror[0m	E:/iadmin/iadmin-service/middleware/operation.go:71	create operation record error:	{"err": "Error 1105: Parameter of prepared statement which is set through mysql_send_long_data() is longer than 'max_allowed_packet' bytes"}
+[I-ADMIN]2021/07/06 - 01:01:07.535	[31merror[0m	E:/iadmin/iadmin-service/api/v1/file_upload_download.go:31	上传文件失败!	{"err": "不允许上传此类型的文件！"}
+[I-ADMIN]2021/07/06 - 01:04:02.803	[31merror[0m	E:/iadmin/iadmin-service/api/v1/file_upload_download.go:31	上传文件失败!	{"err": "文件过大！"}
+[I-ADMIN]2021/07/06 - 01:04:03.029	[31merror[0m	E:/iadmin/iadmin-service/middleware/operation.go:71	create operation record error:	{"err": "Error 1105: Parameter of prepared statement which is set through mysql_send_long_data() is longer than 'max_allowed_packet' bytes"}
+[I-ADMIN]2021/07/06 - 01:04:45.113	[31merror[0m	E:/iadmin/iadmin-service/api/v1/file_upload_download.go:31	上传文件失败!	{"err": "文件过大！"}
+[I-ADMIN]2021/07/06 - 01:04:45.329	[31merror[0m	E:/iadmin/iadmin-service/middleware/operation.go:71	create operation record error:	{"err": "Error 1105: Parameter of prepared statement which is set through mysql_send_long_data() is longer than 'max_allowed_packet' bytes"}
+[I-ADMIN]2021/07/06 - 01:05:35.384	[31merror[0m	E:/iadmin/iadmin-service/api/v1/file_upload_download.go:31	上传文件失败!	{"err": "文件过大！"}
+[I-ADMIN]2021/07/06 - 01:05:35.592	[31merror[0m	E:/iadmin/iadmin-service/middleware/operation.go:71	create operation record error:	{"err": "Error 1105: Parameter of prepared statement which is set through mysql_send_long_data() is longer than 'max_allowed_packet' bytes"}
+[I-ADMIN]2021/07/06 - 01:06:54.765	[31merror[0m	E:/iadmin/iadmin-service/api/v1/file_upload_download.go:31	上传文件失败!	{"err": "文件过大！"}
+[I-ADMIN]2021/07/06 - 01:06:54.941	[31merror[0m	E:/iadmin/iadmin-service/middleware/operation.go:71	create operation record error:	{"err": "Error 1105: Parameter of prepared statement which is set through mysql_send_long_data() is longer than 'max_allowed_packet' bytes"}
+[I-ADMIN]2021/07/06 - 01:07:02.873	[31merror[0m	E:/iadmin/iadmin-service/api/v1/file_upload_download.go:31	上传文件失败!	{"err": "文件过大！"}
+[I-ADMIN]2021/07/06 - 01:07:03.031	[31merror[0m	E:/iadmin/iadmin-service/middleware/operation.go:71	create operation record error:	{"err": "Error 1105: Parameter of prepared statement which is set through mysql_send_long_data() is longer than 'max_allowed_packet' bytes"}
+[I-ADMIN]2021/07/06 - 01:07:18.084	[31merror[0m	E:/iadmin/iadmin-service/api/v1/file_upload_download.go:31	上传文件失败!	{"err": "文件过大！"}
+[I-ADMIN]2021/07/06 - 01:07:18.251	[31merror[0m	E:/iadmin/iadmin-service/middleware/operation.go:71	create operation record error:	{"err": "Error 1105: Parameter of prepared statement which is set through mysql_send_long_data() is longer than 'max_allowed_packet' bytes"}
+[I-ADMIN]2021/07/06 - 01:08:48.564	[31merror[0m	E:/iadmin/iadmin-service/api/v1/file_upload_download.go:31	上传文件失败!	{"err": "文件过大！"}
+[I-ADMIN]2021/07/06 - 01:08:48.713	[31merror[0m	E:/iadmin/iadmin-service/middleware/operation.go:71	create operation record error:	{"err": "Error 1105: Parameter of prepared statement which is set through mysql_send_long_data() is longer than 'max_allowed_packet' bytes"}
+[I-ADMIN]2021/07/06 - 01:09:52.753	[31merror[0m	E:/iadmin/iadmin-service/api/v1/file_upload_download.go:31	上传文件失败!	{"err": "文件过大！"}
+[I-ADMIN]2021/07/06 - 01:09:52.909	[31merror[0m	E:/iadmin/iadmin-service/middleware/operation.go:71	create operation record error:	{"err": "Error 1105: Parameter of prepared statement which is set through mysql_send_long_data() is longer than 'max_allowed_packet' bytes"}
+[I-ADMIN]2021/07/06 - 01:09:57.384	[31merror[0m	E:/iadmin/iadmin-service/api/v1/file_upload_download.go:31	上传文件失败!	{"err": "文件过大！"}
+[I-ADMIN]2021/07/06 - 01:09:57.586	[31merror[0m	E:/iadmin/iadmin-service/middleware/operation.go:71	create operation record error:	{"err": "Error 1105: Parameter of prepared statement which is set through mysql_send_long_data() is longer than 'max_allowed_packet' bytes"}
+[I-ADMIN]2021/07/06 - 01:10:12.143	[31merror[0m	E:/iadmin/iadmin-service/api/v1/file_upload_download.go:31	上传文件失败!	{"err": "文件过大！"}
+[I-ADMIN]2021/07/06 - 01:10:12.291	[31merror[0m	E:/iadmin/iadmin-service/middleware/operation.go:71	create operation record error:	{"err": "Error 1105: Parameter of prepared statement which is set through mysql_send_long_data() is longer than 'max_allowed_packet' bytes"}
+[I-ADMIN]2021/07/06 - 01:11:06.572	[31merror[0m	E:/iadmin/iadmin-service/api/v1/file_upload_download.go:31	上传文件失败!	{"err": "文件过大！"}
+[I-ADMIN]2021/07/06 - 01:11:06.724	[31merror[0m	E:/iadmin/iadmin-service/middleware/operation.go:71	create operation record error:	{"err": "Error 1105: Parameter of prepared statement which is set through mysql_send_long_data() is longer than 'max_allowed_packet' bytes"}
+[I-ADMIN]2021/07/06 - 01:11:18.003	[31merror[0m	E:/iadmin/iadmin-service/api/v1/file_upload_download.go:31	上传文件失败!	{"err": "文件过大！"}
+[I-ADMIN]2021/07/06 - 01:11:18.194	[31merror[0m	E:/iadmin/iadmin-service/middleware/operation.go:71	create operation record error:	{"err": "Error 1105: Parameter of prepared statement which is set through mysql_send_long_data() is longer than 'max_allowed_packet' bytes"}
+[I-ADMIN]2021/07/06 - 01:12:43.051	[31merror[0m	E:/iadmin/iadmin-service/api/v1/file_upload_download.go:31	上传文件失败!	{"err": "不允许上传此类型的文件！"}
+[I-ADMIN]2021/07/06 - 01:14:19.241	[31merror[0m	E:/iadmin/iadmin-service/api/v1/file_upload_download.go:31	上传文件失败!	{"err": "不允许上传此类型的文件！"}
+[I-ADMIN]2021/07/06 - 01:27:09.587	[31merror[0m	E:/iadmin/iadmin-service/api/v1/file_upload_download.go:31	上传文件失败!	{"err": "不允许上传此类型的文件！"}
+[I-ADMIN]2021/07/06 - 01:45:54.622	[34minfo[0m	E:/iadmin/iadmin-service/initialize/gorm.go:21	mysql 连接成功	{"dsn": "root:@tcp(127.0.0.1:3306)/gin?charset=utf8&parseTime=true"}
+[I-ADMIN]2021/07/06 - 01:45:54.623	[34minfo[0m	E:/iadmin/iadmin-service/initialize/redis.go:20	redis 连接成功:	{"redisCfg": {"db":0,"addr":"127.0.0.1:6379","password":""}}
+[I-ADMIN]2021/07/06 - 01:45:54.624	[34minfo[0m	E:/iadmin/iadmin-service/initialize/router.go:19	swagger注册成功,swagger页面为：/swagger/index.html
+[I-ADMIN]2021/07/06 - 01:45:54.624	[34minfo[0m	E:/iadmin/iadmin-service/initialize/router.go:39	router 注册成功
+[I-ADMIN]2021/07/06 - 01:45:54.626	[34minfo[0m	E:/iadmin/iadmin-service/core/server.go:28	server run success on http://127.0.0.1:8991
+[I-ADMIN]2021/07/06 - 01:45:54.626	[34minfo[0m	E:/iadmin/iadmin-service/core/server.go:29	swagger page on http://127.0.0.1:8991/swagger/index.html
+[I-ADMIN]2021/07/06 - 01:46:44.656	[31merror[0m	E:/iadmin/iadmin-service/api/v1/file_upload_download.go:31	上传文件失败!	{"err": "不允许上传此类型的文件！"}
+[I-ADMIN]2021/07/06 - 21:30:42.224	[34minfo[0m	E:/iadmin/iadmin-service/initialize/gorm.go:21	mysql 连接成功	{"dsn": "root:@tcp(127.0.0.1:3306)/gin?charset=utf8&parseTime=true"}
+[I-ADMIN]2021/07/06 - 21:30:42.227	[34minfo[0m	E:/iadmin/iadmin-service/initialize/redis.go:20	redis 连接成功:	{"redisCfg": {"db":0,"addr":"127.0.0.1:6379","password":""}}
+[I-ADMIN]2021/07/06 - 21:30:42.227	[34minfo[0m	E:/iadmin/iadmin-service/initialize/router.go:19	swagger注册成功,swagger页面为：/swagger/index.html
+[I-ADMIN]2021/07/06 - 21:30:42.228	[34minfo[0m	E:/iadmin/iadmin-service/initialize/router.go:39	router 注册成功
+[I-ADMIN]2021/07/06 - 21:30:42.239	[34minfo[0m	E:/iadmin/iadmin-service/core/server.go:28	server run success on http://127.0.0.1:8991
+[I-ADMIN]2021/07/06 - 21:30:42.239	[34minfo[0m	E:/iadmin/iadmin-service/core/server.go:29	swagger page on http://127.0.0.1:8991/swagger/index.html
+[I-ADMIN]2021/07/06 - 21:32:03.643	[31merror[0m	E:/iadmin/iadmin-service/api/v1/file_upload_download.go:31	上传文件失败!	{"err": "不允许上传此类型的文件！"}
+[I-ADMIN]2021/07/06 - 21:32:47.384	[31merror[0m	E:/iadmin/iadmin-service/api/v1/file_upload_download.go:31	上传文件失败!	{"err": "文件过大！"}
+[I-ADMIN]2021/07/06 - 21:32:47.707	[31merror[0m	E:/iadmin/iadmin-service/middleware/operation.go:71	create operation record error:	{"err": "Error 1105: Parameter of prepared statement which is set through mysql_send_long_data() is longer than 'max_allowed_packet' bytes"}
+[I-ADMIN]2021/07/06 - 23:19:36.244	[34minfo[0m	E:/iadmin/iadmin-service/initialize/gorm.go:21	mysql 连接成功	{"dsn": "root:@tcp(127.0.0.1:3306)/gin?charset=utf8&parseTime=true"}
+[I-ADMIN]2021/07/06 - 23:19:36.246	[34minfo[0m	E:/iadmin/iadmin-service/initialize/redis.go:20	redis 连接成功:	{"redisCfg": {"db":0,"addr":"127.0.0.1:6379","password":""}}
+[I-ADMIN]2021/07/06 - 23:19:36.246	[34minfo[0m	E:/iadmin/iadmin-service/initialize/router.go:19	swagger注册成功,swagger页面为：/swagger/index.html
+[I-ADMIN]2021/07/06 - 23:19:36.247	[34minfo[0m	E:/iadmin/iadmin-service/initialize/router.go:40	router 注册成功
+[I-ADMIN]2021/07/06 - 23:19:36.262	[34minfo[0m	E:/iadmin/iadmin-service/core/server.go:28	server run success on http://127.0.0.1:8991
+[I-ADMIN]2021/07/06 - 23:19:36.265	[34minfo[0m	E:/iadmin/iadmin-service/core/server.go:29	swagger page on http://127.0.0.1:8991/swagger/index.html

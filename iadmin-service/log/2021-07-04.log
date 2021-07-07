@@ -1,0 +1,12 @@
+[I-ADMIN]2021/07/04 - 00:06:23.296	[34minfo[0m	E:/iadmin/iadmin-service/initialize/gorm.go:21	mysql 连接成功	{"dsn": "root:@tcp(127.0.0.1:3306)/gin?charset=utf8&parseTime=true"}
+[I-ADMIN]2021/07/04 - 00:06:23.301	[34minfo[0m	E:/iadmin/iadmin-service/initialize/redis.go:20	redis 连接成功:	{"redisCfg": {"db":0,"addr":"127.0.0.1:6379","password":""}}
+[I-ADMIN]2021/07/04 - 00:06:23.302	[34minfo[0m	E:/iadmin/iadmin-service/initialize/router.go:19	swagger注册成功,swagger页面为：/swagger/index.html
+[I-ADMIN]2021/07/04 - 00:06:23.302	[34minfo[0m	E:/iadmin/iadmin-service/initialize/router.go:38	router 注册成功
+[I-ADMIN]2021/07/04 - 00:06:23.306	[34minfo[0m	E:/iadmin/iadmin-service/core/server.go:28	server run success on http://127.0.0.1:8991
+[I-ADMIN]2021/07/04 - 00:06:23.306	[34minfo[0m	E:/iadmin/iadmin-service/core/server.go:29	swagger page on http://127.0.0.1:8991/swagger/index.html
+[I-ADMIN]2021/07/04 - 23:13:37.225	[34minfo[0m	E:/iadmin/iadmin-service/initialize/gorm.go:21	mysql 连接成功	{"dsn": "root:@tcp(127.0.0.1:3306)/gin?charset=utf8&parseTime=true"}
+[I-ADMIN]2021/07/04 - 23:13:37.227	[34minfo[0m	E:/iadmin/iadmin-service/initialize/redis.go:20	redis 连接成功:	{"redisCfg": {"db":0,"addr":"127.0.0.1:6379","password":""}}
+[I-ADMIN]2021/07/04 - 23:13:37.227	[34minfo[0m	E:/iadmin/iadmin-service/initialize/router.go:19	swagger注册成功,swagger页面为：/swagger/index.html
+[I-ADMIN]2021/07/04 - 23:13:37.227	[34minfo[0m	E:/iadmin/iadmin-service/initialize/router.go:38	router 注册成功
+[I-ADMIN]2021/07/04 - 23:13:37.238	[34minfo[0m	E:/iadmin/iadmin-service/core/server.go:28	server run success on http://127.0.0.1:8991
+[I-ADMIN]2021/07/04 - 23:13:37.238	[34minfo[0m	E:/iadmin/iadmin-service/core/server.go:29	swagger page on http://127.0.0.1:8991/swagger/index.html

@@ -1,1 +1,0 @@
-[I-ADMIN]2021/06/22 - 23:25:19.733	[31merror[0m	E:/iAdmin/iadmin-service/initialize/gorm.go:17	mysql 连接异常, err:	{"err": "Error 1045: Access denied for user 'root'@'localhost' (using password: YES)"}
