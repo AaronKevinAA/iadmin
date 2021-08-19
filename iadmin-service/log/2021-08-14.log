@@ -1,0 +1,37 @@
+[I-ADMIN]2021/08/14 - 19:38:37.151	[34minfo[0m	E:/iadmin/iadmin-service/initialize/gorm.go:21	mysql 连接成功	{"dsn": "root:@tcp(127.0.0.1:3306)/gin?charset=utf8&parseTime=true"}
+[I-ADMIN]2021/08/14 - 19:38:39.179	[31merror[0m	E:/iadmin/iadmin-service/initialize/redis.go:18	redis 连接失败, err:	{"err": "dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it."}
+[I-ADMIN]2021/08/14 - 19:38:39.181	[34minfo[0m	E:/iadmin/iadmin-service/initialize/router.go:19	swagger注册成功,swagger页面为：/swagger/index.html
+[I-ADMIN]2021/08/14 - 19:38:39.181	[34minfo[0m	E:/iadmin/iadmin-service/initialize/router.go:40	router 注册成功
+[I-ADMIN]2021/08/14 - 19:38:39.195	[34minfo[0m	E:/iadmin/iadmin-service/core/server.go:28	server run success on http://127.0.0.1:8991
+[I-ADMIN]2021/08/14 - 19:38:39.199	[34minfo[0m	E:/iadmin/iadmin-service/core/server.go:29	swagger page on http://127.0.0.1:8991/swagger/index.html
+[I-ADMIN]2021/08/14 - 20:02:42.181	[34minfo[0m	E:/iadmin/iadmin-service/initialize/gorm.go:21	mysql 连接成功	{"dsn": "root:@tcp(127.0.0.1:3306)/gin?charset=utf8&parseTime=true"}
+[I-ADMIN]2021/08/14 - 20:02:44.229	[31merror[0m	E:/iadmin/iadmin-service/initialize/redis.go:18	redis 连接失败, err:	{"err": "dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it."}
+[I-ADMIN]2021/08/14 - 20:02:44.229	[34minfo[0m	E:/iadmin/iadmin-service/initialize/router.go:19	swagger注册成功,swagger页面为：/swagger/index.html
+[I-ADMIN]2021/08/14 - 20:02:44.230	[34minfo[0m	E:/iadmin/iadmin-service/initialize/router.go:41	router 注册成功
+[I-ADMIN]2021/08/14 - 20:02:44.243	[34minfo[0m	E:/iadmin/iadmin-service/core/server.go:28	server run success on http://127.0.0.1:8991
+[I-ADMIN]2021/08/14 - 20:02:44.244	[34minfo[0m	E:/iadmin/iadmin-service/core/server.go:29	swagger page on http://127.0.0.1:8991/swagger/index.html
+[I-ADMIN]2021/08/14 - 20:03:34.325	[34minfo[0m	E:/iadmin/iadmin-service/initialize/gorm.go:21	mysql 连接成功	{"dsn": "root:@tcp(127.0.0.1:3306)/gin?charset=utf8&parseTime=true"}
+[I-ADMIN]2021/08/14 - 20:03:36.385	[31merror[0m	E:/iadmin/iadmin-service/initialize/redis.go:18	redis 连接失败, err:	{"err": "dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it."}
+[I-ADMIN]2021/08/14 - 20:03:36.386	[34minfo[0m	E:/iadmin/iadmin-service/initialize/router.go:19	swagger注册成功,swagger页面为：/swagger/index.html
+[I-ADMIN]2021/08/14 - 20:03:36.386	[34minfo[0m	E:/iadmin/iadmin-service/initialize/router.go:41	router 注册成功
+[I-ADMIN]2021/08/14 - 20:03:36.401	[34minfo[0m	E:/iadmin/iadmin-service/core/server.go:28	server run success on http://127.0.0.1:8991
+[I-ADMIN]2021/08/14 - 20:03:36.401	[34minfo[0m	E:/iadmin/iadmin-service/core/server.go:29	swagger page on http://127.0.0.1:8991/swagger/index.html
+[I-ADMIN]2021/08/14 - 20:09:54.729	[34minfo[0m	E:/iadmin/iadmin-service/initialize/gorm.go:21	mysql 连接成功	{"dsn": "root:@tcp(127.0.0.1:3306)/gin?charset=utf8&parseTime=true"}
+[I-ADMIN]2021/08/14 - 20:09:56.775	[31merror[0m	E:/iadmin/iadmin-service/initialize/redis.go:18	redis 连接失败, err:	{"err": "dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it."}
+[I-ADMIN]2021/08/14 - 20:09:56.776	[34minfo[0m	E:/iadmin/iadmin-service/initialize/router.go:19	swagger注册成功,swagger页面为：/swagger/index.html
+[I-ADMIN]2021/08/14 - 20:09:56.776	[34minfo[0m	E:/iadmin/iadmin-service/initialize/router.go:41	router 注册成功
+[I-ADMIN]2021/08/14 - 20:09:56.790	[34minfo[0m	E:/iadmin/iadmin-service/core/server.go:28	server run success on http://127.0.0.1:8991
+[I-ADMIN]2021/08/14 - 20:09:56.790	[34minfo[0m	E:/iadmin/iadmin-service/core/server.go:29	swagger page on http://127.0.0.1:8991/swagger/index.html
+[I-ADMIN]2021/08/14 - 20:10:18.252	[31merror[0m	E:/iadmin/iadmin-service/api/v2/zcfx_equipment_risk.go:49	新增失败！	{"err": "Error 1054: Unknown column 'updated_at' in 'field list'"}
+[I-ADMIN]2021/08/14 - 20:18:56.471	[34minfo[0m	E:/iadmin/iadmin-service/initialize/gorm.go:21	mysql 连接成功	{"dsn": "root:@tcp(127.0.0.1:3306)/gin?charset=utf8&parseTime=true"}
+[I-ADMIN]2021/08/14 - 20:18:58.519	[31merror[0m	E:/iadmin/iadmin-service/initialize/redis.go:18	redis 连接失败, err:	{"err": "dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it."}
+[I-ADMIN]2021/08/14 - 20:18:58.520	[34minfo[0m	E:/iadmin/iadmin-service/initialize/router.go:19	swagger注册成功,swagger页面为：/swagger/index.html
+[I-ADMIN]2021/08/14 - 20:18:58.520	[34minfo[0m	E:/iadmin/iadmin-service/initialize/router.go:41	router 注册成功
+[I-ADMIN]2021/08/14 - 20:18:58.534	[34minfo[0m	E:/iadmin/iadmin-service/core/server.go:28	server run success on http://127.0.0.1:8991
+[I-ADMIN]2021/08/14 - 20:18:58.534	[34minfo[0m	E:/iadmin/iadmin-service/core/server.go:29	swagger page on http://127.0.0.1:8991/swagger/index.html
+[I-ADMIN]2021/08/14 - 20:22:58.015	[34minfo[0m	E:/iadmin/iadmin-service/initialize/gorm.go:21	mysql 连接成功	{"dsn": "root:@tcp(127.0.0.1:3306)/gin?charset=utf8&parseTime=true"}
+[I-ADMIN]2021/08/14 - 20:23:00.069	[31merror[0m	E:/iadmin/iadmin-service/initialize/redis.go:18	redis 连接失败, err:	{"err": "dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it."}
+[I-ADMIN]2021/08/14 - 20:23:00.069	[34minfo[0m	E:/iadmin/iadmin-service/initialize/router.go:19	swagger注册成功,swagger页面为：/swagger/index.html
+[I-ADMIN]2021/08/14 - 20:23:00.069	[34minfo[0m	E:/iadmin/iadmin-service/initialize/router.go:41	router 注册成功
+[I-ADMIN]2021/08/14 - 20:23:00.084	[34minfo[0m	E:/iadmin/iadmin-service/core/server.go:28	server run success on http://127.0.0.1:8991
+[I-ADMIN]2021/08/14 - 20:23:00.084	[34minfo[0m	E:/iadmin/iadmin-service/core/server.go:29	swagger page on http://127.0.0.1:8991/swagger/index.html
