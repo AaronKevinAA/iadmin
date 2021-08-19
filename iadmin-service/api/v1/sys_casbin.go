@@ -22,7 +22,7 @@ func UpdateCasbin(c *gin.Context) {
 	_ = c.ShouldBindJSON(&cmr)
 	if err := service.UpdateCasbin(cmr.RoleId, cmr.CasbinInfos); err != nil {
 		global.GvaLog.Error("更新失败!", zap.Any("err", err))
-		response.FailWithMessage("更新失败!", c)
+		response.FailWithMessage(err.Error(), c)
 	} else {
 		response.OkWithMessage("更新成功", c)
 	}

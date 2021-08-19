@@ -24,7 +24,7 @@ func CreateSysOperationRecord(c *gin.Context) {
 	_ = c.ShouldBindJSON(&sysOperationRecord)
 	if err := service.CreateSysOperationRecord(sysOperationRecord); err != nil {
 		global.GvaLog.Error("创建失败!", zap.Any("err", err))
-		response.FailWithMessage("创建失败", c)
+		response.FailWithMessage(err.Error(), c)
 	} else {
 		response.OkWithMessage("创建成功", c)
 	}
@@ -43,7 +43,7 @@ func DeleteSysOperationRecord(c *gin.Context) {
 	_ = c.ShouldBindJSON(&sysOperationRecord)
 	if err := service.DeleteSysOperationRecord(sysOperationRecord); err != nil {
 		global.GvaLog.Error("删除失败!", zap.Any("err", err))
-		response.FailWithMessage("删除失败", c)
+		response.FailWithMessage(err.Error(), c)
 	} else {
 		response.OkWithMessage("删除成功", c)
 	}
@@ -62,7 +62,7 @@ func DeleteBatchSysOperationRecord(c *gin.Context) {
 	_ = c.ShouldBindJSON(&IDS)
 	if err := service.DeleteBatchSysOperationRecord(IDS); err != nil {
 		global.GvaLog.Error("批量删除失败!", zap.Any("err", err))
-		response.FailWithMessage("批量删除失败", c)
+		response.FailWithMessage(err.Error(), c)
 	} else {
 		response.OkWithMessage("批量删除成功", c)
 	}
@@ -85,7 +85,7 @@ func FindSysOperationRecord(c *gin.Context) {
 	}
 	if err, resysOperationRecord := service.GetSysOperationRecord(sysOperationRecord.ID); err != nil {
 		global.GvaLog.Error("查询失败!", zap.Any("err", err))
-		response.FailWithMessage("查询失败", c)
+		response.FailWithMessage(err.Error(), c)
 	} else {
 		response.OkWithDetailed(gin.H{"resysOperationRecord": resysOperationRecord}, "查询成功", c)
 	}
@@ -104,13 +104,51 @@ func GetSysOperationRecordList(c *gin.Context) {
 	_ = c.ShouldBindJSON(&pageInfo)
 	if err, list, total := service.GetSysOperationRecordInfoList(pageInfo); err != nil {
 		global.GvaLog.Error("获取失败!", zap.Any("err", err))
-		response.FailWithMessage("获取失败", c)
+		response.FailWithMessage(err.Error(), c)
 	} else {
 		response.OkWithDetailed(response.PageResult{
 			List:     list,
 			Total:    total,
-			Current:     pageInfo.Current,
+			Current:  pageInfo.Current,
 			PageSize: pageInfo.PageSize,
 		}, "获取成功", c)
 	}
+}
+
+// @Tags SysOperationRecord
+// @Summary 批量导出SysOperationRecord
+// @Security ApiKeyAuth
+// @accept application/json
+// @Produce application/json
+// @Param data body request.SysOperationRecordExcelOut true "批量导出请求模型"
+// @Success 200 {string} string "{"success":true,"data":{},"msg":"批量导出成功"}"
+// @Router /api/sysOperationRecord/excelOut [POST]
+func ExcelOutSysOperationRecord(c *gin.Context) {
+	var E request.SysOperationRecordExcelOut
+	_ = c.ShouldBindJSON(&E)
+	err, excelFilePath := service.ExcelOutSysOperationRecord(E)
+	if err != nil {
+		global.GvaLog.Error("批量导出失败!", zap.Any("err", err))
+		response.FailWithMessage(err.Error(), c)
+		// 如果文件路径不为空，则页需要删除文件
+		if excelFilePath != "" {
+			err = utils.DeleteLocalFile(excelFilePath)
+			if err != nil {
+				global.GvaLog.Error("删除文件失败!", zap.Any("err", err))
+				return
+			}
+		}
+		return
+	}
+	// 要设置这一条，要不然前端获取不到Content-Disposition
+	c.Writer.Header().Add("Access-Control-Expose-Headers", "Content-Disposition")
+	c.Writer.Header().Add("Content-Disposition", "sysOperationRecordTable.xlsx")
+	c.File(excelFilePath)
+	// 删除Excel文件
+	err = utils.DeleteLocalFile(excelFilePath)
+	if err != nil {
+		global.GvaLog.Error("删除文件失败!", zap.Any("err", err))
+		return
+	}
+	return
 }

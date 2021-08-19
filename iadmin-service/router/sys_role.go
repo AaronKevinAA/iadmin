@@ -15,6 +15,7 @@ func InitSysRoleRouter(Router *gin.RouterGroup) (R gin.IRoutes) {
 		RoleRouter.Use(middleware.OperationRecord()).DELETE("deleteBatchSysRole", v1.DeleteBatchSysRole)
 		RoleRouter.Use(middleware.OperationRecord()).PUT("updateSysRoleMenuConfig", v1.UpdateSysRoleMenuConfig)
 		RoleRouter.Use(middleware.OperationRecord()).PUT("setRoleDefaultRouter", v1.SetRoleDefaultRouter)
+		RoleRouter.POST("excelOut", v1.ExcelOutSysRole)
 	}
 	return RoleRouter
 }

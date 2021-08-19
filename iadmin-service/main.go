@@ -14,10 +14,10 @@ import (
 // @securityDefinitions.apikey ApiKeyAuth
 // @in header
 // @name x-token
-// @BasePath /
-func main()  {
+// @BasePath
+func main() {
 	// 读取配置文件
-	global.GvaVp  = core.Viper()
+	global.GvaVp = core.Viper()
 	// 初始化zap日志库
 	global.GvaLog = core.Zap()
 	// 初始化gorm

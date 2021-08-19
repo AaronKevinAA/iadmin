@@ -14,3 +14,8 @@ type SysRoleDefaultRouter struct {
 	RoleId        uint   `json:"role_id"`
 	DefaultRouter string `json:"default_router"`
 }
+
+type SysRoleExcelOut struct {
+	Pagination     Pagination      `json:"pagination"`
+	ExcelOutConfig ExcelOutRequest `json:"excelOutConfig"`
+}

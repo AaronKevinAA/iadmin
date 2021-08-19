@@ -70,3 +70,17 @@ func (s *MenuList) findChildren(pid uint, menuLevel uint) []SysMenu {
 	}
 	return children
 }
+
+func SysMenuExcelOutTableHeadName() (tableHeadName []string) {
+	tableHeadName = []string{"ID", "父菜单ID", "菜单层级", "展示标题", "路由路径", "路由名称", "前端页面路径", "展示顺序", "图标", "是否在菜单显示", "是否使用Tab缓存", "是否全屏显示", "创建时间", "最后更新时间"}
+	return tableHeadName
+}
+
+func SysMenuExcelOutTableData(menuList []SysMenu) (tableData [][]string) {
+	for _, menu := range menuList {
+		menuInfo := []string{global.Uint2String(menu.ID), global.Uint2String(menu.ParentId), global.Uint2String(menu.MenuLevel), menu.Title, menu.Path, menu.Name, menu.Component, global.Int2String(menu.Order),
+			menu.Icon, global.Bool2String(menu.ShowInMenu), global.Bool2String(menu.KeepAlive), global.Bool2String(menu.FullPage), global.Timestamp2DateTime(menu.CreatedAt), global.Timestamp2DateTime(menu.UpdatedAt)}
+		tableData = append(tableData, menuInfo)
+	}
+	return tableData
+}

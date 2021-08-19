@@ -46,6 +46,59 @@ var doc = `{
                 }
             }
         },
+        "/api/base/downloadExcelInTemplate": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Base"
+                ],
+                "summary": "下载批量导入的模板",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "数据库表名称",
+                        "name": "databaseName",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{\"success\":true,\"data\":{},\"msg\":\"下载成功\"}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/base/generateRSAKey": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Base"
+                ],
+                "summary": "生成RSA密钥",
+                "responses": {
+                    "200": {
+                        "description": "{\"success\":true,\"data\":{},\"msg\":\"生成密钥成功\"}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
         "/api/base/login": {
             "post": {
                 "produces": [
@@ -294,6 +347,118 @@ var doc = `{
                 }
             }
         },
+        "/api/sysApi/excelIn": {
+            "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "SysApi"
+                ],
+                "summary": "批量导入接口",
+                "parameters": [
+                    {
+                        "description": "保存的文件名称",
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/request.ExcelInRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{\"success\":true,\"data\":{},\"msg\":\"批量导入成功\"}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sysApi/excelInPreview": {
+            "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "SysApi"
+                ],
+                "summary": "批量导入接口预览",
+                "parameters": [
+                    {
+                        "type": "file",
+                        "description": "上传文件",
+                        "name": "file",
+                        "in": "formData",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{\"success\":true,\"data\":{},\"msg\":\"批量导入预览成功\"}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sysApi/excelOut": {
+            "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "SysApi"
+                ],
+                "summary": "批量导出接口",
+                "parameters": [
+                    {
+                        "description": "批量导出请求模型",
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/request.SysApiExcelOut"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{\"success\":true,\"data\":{},\"msg\":\"批量导出成功\"}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
         "/api/sysApi/getSysApiList": {
             "post": {
                 "security": [
@@ -473,6 +638,44 @@ var doc = `{
                 }
             }
         },
+        "/api/sysMenu/excelOut": {
+            "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "SysMenu"
+                ],
+                "summary": "批量导出菜单",
+                "parameters": [
+                    {
+                        "description": "批量导出请求模型",
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/request.ExcelOutRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{\"success\":true,\"data\":{},\"msg\":\"批量导出成功\"}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
         "/api/sysMenu/getSysMenuByToken": {
             "get": {
                 "security": [
@@ -565,6 +768,44 @@ var doc = `{
                 }
             }
         },
+        "/api/sysOperationRecord/excelOut": {
+            "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "SysOperationRecord"
+                ],
+                "summary": "批量导出SysOperationRecord",
+                "parameters": [
+                    {
+                        "description": "批量导出请求模型",
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/request.SysOperationRecordExcelOut"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{\"success\":true,\"data\":{},\"msg\":\"批量导出成功\"}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
         "/api/sysRole/addSysRoleInfo": {
             "post": {
                 "security": [
@@ -634,6 +875,44 @@ var doc = `{
                 "responses": {
                     "200": {
                         "description": "{\"success\":true,\"data\":{},\"msg\":\"批量删除成功\"}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sysRole/excelOut": {
+            "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "SysRole"
+                ],
+                "summary": "批量导出角色",
+                "parameters": [
+                    {
+                        "description": "批量导出请求模型",
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/request.SysRoleExcelOut"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{\"success\":true,\"data\":{},\"msg\":\"批量导出成功\"}",
                         "schema": {
                             "type": "string"
                         }
@@ -872,6 +1151,118 @@ var doc = `{
                 }
             }
         },
+        "/api/sysUser/excelIn": {
+            "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "SysUser"
+                ],
+                "summary": "批量导入用户",
+                "parameters": [
+                    {
+                        "description": "保存的文件名称",
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/request.ExcelInRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{\"success\":true,\"data\":{},\"msg\":\"批量导入成功\"}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sysUser/excelInPreview": {
+            "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "SysUser"
+                ],
+                "summary": "批量导入用户预览",
+                "parameters": [
+                    {
+                        "type": "file",
+                        "description": "上传文件",
+                        "name": "file",
+                        "in": "formData",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{\"success\":true,\"data\":{},\"msg\":\"批量导入预览成功\"}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sysUser/excelOut": {
+            "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "SysUser"
+                ],
+                "summary": "批量导出用户",
+                "parameters": [
+                    {
+                        "description": "批量导出请求模型",
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/request.SysUserExcelOut"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{\"success\":true,\"data\":{},\"msg\":\"批量导出成功\"}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
         "/api/sysUser/getSysUserList": {
             "post": {
                 "security": [
@@ -903,6 +1294,120 @@ var doc = `{
                 "responses": {
                     "200": {
                         "description": "{\"success\":true,\"data\":{},\"msg\":\"获取成功\"}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sysUser/resetPassword": {
+            "put": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "SysUser"
+                ],
+                "summary": "重置用户密码",
+                "parameters": [
+                    {
+                        "description": "用户ID",
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/request.SysUserID"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{\"success\":true,\"data\":{},\"msg\":\"重置密码成功\"}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sysUser/updateBasicInfoByToken": {
+            "put": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "SysUser"
+                ],
+                "summary": "修改用户基本信息",
+                "parameters": [
+                    {
+                        "description": "修改用户基本信息模型",
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/request.SysUserBasicInfo"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{\"success\":true,\"data\":{},\"msg\":\"修改基本信息成功\"}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sysUser/updatePasswordByToken": {
+            "put": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "SysUser"
+                ],
+                "summary": "修改用户密码",
+                "parameters": [
+                    {
+                        "description": "修改密码模型",
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/request.UpdatePasswordByToken"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{\"success\":true,\"data\":{},\"msg\":\"修改密码成功\"}",
                         "schema": {
                             "type": "string"
                         }
@@ -1194,7 +1699,7 @@ var doc = `{
                     "type": "string"
                 },
                 "order": {
-                    "type": "string"
+                    "type": "integer"
                 },
                 "parentId": {
                     "description": "父菜单ID",
@@ -1353,6 +1858,25 @@ var doc = `{
                 }
             }
         },
+        "request.ExcelInRequest": {
+            "type": "object",
+            "properties": {
+                "saveFileName": {
+                    "type": "string"
+                }
+            }
+        },
+        "request.ExcelOutRequest": {
+            "type": "object",
+            "properties": {
+                "hasAllData": {
+                    "type": "boolean"
+                },
+                "hasTableHead": {
+                    "type": "boolean"
+                }
+            }
+        },
         "request.IdsReq": {
             "type": "object",
             "properties": {
@@ -1377,6 +1901,9 @@ var doc = `{
                     "type": "string"
                 },
                 "phone": {
+                    "type": "string"
+                },
+                "redisKey": {
                     "type": "string"
                 }
             }
@@ -1411,6 +1938,20 @@ var doc = `{
                 },
                 "realName": {
                     "type": "string"
+                },
+                "redisKey": {
+                    "type": "string"
+                }
+            }
+        },
+        "request.SysApiExcelOut": {
+            "type": "object",
+            "properties": {
+                "excelOutConfig": {
+                    "$ref": "#/definitions/request.ExcelOutRequest"
+                },
+                "sysApiListSearch": {
+                    "$ref": "#/definitions/request.SysApiListSearch"
                 }
             }
         },
@@ -1434,6 +1975,17 @@ var doc = `{
                 },
                 "pagination": {
                     "$ref": "#/definitions/request.Pagination"
+                }
+            }
+        },
+        "request.SysOperationRecordExcelOut": {
+            "type": "object",
+            "properties": {
+                "excelOutConfig": {
+                    "$ref": "#/definitions/request.ExcelOutRequest"
+                },
+                "sysOperationRecordSearch": {
+                    "$ref": "#/definitions/request.SysOperationRecordSearch"
                 }
             }
         },
@@ -1479,6 +2031,17 @@ var doc = `{
                 }
             }
         },
+        "request.SysRoleExcelOut": {
+            "type": "object",
+            "properties": {
+                "excelOutConfig": {
+                    "$ref": "#/definitions/request.ExcelOutRequest"
+                },
+                "pagination": {
+                    "$ref": "#/definitions/request.Pagination"
+                }
+            }
+        },
         "request.SysRoleMenuConfig": {
             "type": "object",
             "properties": {
@@ -1489,6 +2052,36 @@ var doc = `{
                     }
                 },
                 "role_id": {
+                    "type": "integer"
+                }
+            }
+        },
+        "request.SysUserBasicInfo": {
+            "type": "object",
+            "properties": {
+                "phone": {
+                    "type": "string"
+                },
+                "realName": {
+                    "type": "string"
+                }
+            }
+        },
+        "request.SysUserExcelOut": {
+            "type": "object",
+            "properties": {
+                "excelOutConfig": {
+                    "$ref": "#/definitions/request.ExcelOutRequest"
+                },
+                "sysUserListSearch": {
+                    "$ref": "#/definitions/request.SysUserListSearch"
+                }
+            }
+        },
+        "request.SysUserID": {
+            "type": "object",
+            "properties": {
+                "userId": {
                     "type": "integer"
                 }
             }
@@ -1509,6 +2102,23 @@ var doc = `{
                     "type": "string"
                 },
                 "realName": {
+                    "type": "string"
+                }
+            }
+        },
+        "request.UpdatePasswordByToken": {
+            "type": "object",
+            "properties": {
+                "confirmPassword": {
+                    "type": "string"
+                },
+                "newPassword": {
+                    "type": "string"
+                },
+                "oldPassword": {
+                    "type": "string"
+                },
+                "redisKey": {
                     "type": "string"
                 }
             }
@@ -1536,7 +2146,7 @@ type swaggerInfo struct {
 var SwaggerInfo = swaggerInfo{
 	Version:     "0.0.1",
 	Host:        "",
-	BasePath:    "/",
+	BasePath:    "",
 	Schemes:     []string{},
 	Title:       "Swagger Example API",
 	Description: "This is a sample Server pets",

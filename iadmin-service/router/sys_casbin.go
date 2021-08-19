@@ -7,9 +7,9 @@ import (
 )
 
 func InitCasbinRouter(Router *gin.RouterGroup) {
-	CasbinRouter := Router.Group("casbin").Use(middleware.OperationRecord())
+	CasbinRouter := Router.Group("casbin")
 	{
-		CasbinRouter.POST("updateCasbin", v1.UpdateCasbin)
+		CasbinRouter.Use(middleware.OperationRecord()).POST("updateCasbin", v1.UpdateCasbin)
 		CasbinRouter.POST("getPolicyPathByRoleId", v1.GetPolicyPathByRoleId)
 	}
 }

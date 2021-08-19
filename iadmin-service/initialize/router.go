@@ -27,7 +27,6 @@ func Router() *gin.Engine {
 	}
 	PrivateGroup := Router.Group("/api")
 	PrivateGroup.Use(middleware.JWTAuth()).Use(middleware.CasbinHandler())
-
 	{
 		router.InitSysUserRouter(PrivateGroup)
 		router.InitSysMenuRouter(PrivateGroup)
@@ -36,6 +35,7 @@ func Router() *gin.Engine {
 		router.InitSysOperationRecordRouter(PrivateGroup) // 操作记录
 		router.InitCasbinRouter(PrivateGroup)             // 权限相关路由
 		router.InitFileRouter(PrivateGroup)
+
 	}
 	global.GvaLog.Info("router 注册成功")
 	return Router

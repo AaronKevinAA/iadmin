@@ -6,6 +6,7 @@ import (
 	"ginProject/model/request"
 	"ginProject/model/response"
 	"ginProject/service"
+	"ginProject/utils"
 	"github.com/gin-gonic/gin"
 	"go.uber.org/zap"
 )
@@ -23,7 +24,8 @@ func GetSysRoleList(c *gin.Context) {
 	_ = c.ShouldBindJSON(&U)
 	err, total, list := service.GetSysRoleList(&U)
 	if err != nil {
-		response.FailWithMessage("获取角色列表失败！", c)
+		global.GvaLog.Error("获取角色列表失败！", zap.Any("err", err))
+		response.FailWithMessage(err.Error(), c)
 	} else {
 		response.OkWithDetailed(response.PageResult{
 			List:     list,
@@ -47,7 +49,7 @@ func UpdateSysRoleInfo(c *gin.Context) {
 	_ = c.ShouldBindJSON(&role)
 	if err, ret := service.UpdateSysRoleInfo(role); err != nil {
 		global.GvaLog.Error("更新失败！", zap.Any("err", err))
-		response.FailWithMessage("更新失败！", c)
+		response.FailWithMessage(err.Error(), c)
 	} else {
 		response.OkWithDetailed(gin.H{"roleInfo": ret}, "更新成功", c)
 	}
@@ -66,7 +68,7 @@ func AddSysRoleInfo(c *gin.Context) {
 	_ = c.ShouldBindJSON(&role)
 	if err, ret := service.AddSysRoleInfo(role); err != nil {
 		global.GvaLog.Error("新增失败！", zap.Any("err", err))
-		response.FailWithDetailed(response.SysRoleResponse{Role: ret}, "新增失败！", c)
+		response.FailWithDetailed(response.SysRoleResponse{Role: ret}, err.Error(), c)
 	} else {
 		response.OkWithDetailed(gin.H{"roleInfo": ret}, "新增成功", c)
 	}
@@ -85,7 +87,7 @@ func DeleteBatchSysRole(c *gin.Context) {
 	_ = c.ShouldBindJSON(&IDS)
 	if err := service.DeleteBatchSysRole(IDS); err != nil {
 		global.GvaLog.Error("批量删除失败!", zap.Any("err", err))
-		response.FailWithMessage("批量删除失败！", c)
+		response.FailWithMessage(err.Error(), c)
 	} else {
 		response.OkWithMessage("批量删除成功", c)
 	}
@@ -104,7 +106,7 @@ func UpdateSysRoleMenuConfig(c *gin.Context) {
 	_ = c.ShouldBindJSON(&s)
 	if err := service.UpdateSysRoleMenuConfig(s); err != nil {
 		global.GvaLog.Error("配置角色菜单失败!", zap.Any("err", err))
-		response.FailWithMessage("配置角色菜单失败！", c)
+		response.FailWithMessage(err.Error(), c)
 	} else {
 		response.OkWithMessage("配置角色菜单成功", c)
 	}
@@ -123,8 +125,46 @@ func SetRoleDefaultRouter(c *gin.Context) {
 	_ = c.ShouldBindJSON(&s)
 	if err := service.SetRoleDefaultRouter(s); err != nil {
 		global.GvaLog.Error("配置角色菜单首页失败!", zap.Any("err", err))
-		response.FailWithMessage("配置角色菜单首页失败！", c)
+		response.FailWithMessage(err.Error(), c)
 	} else {
 		response.OkWithMessage("配置角色菜单首页成功", c)
 	}
+}
+
+// @Tags SysRole
+// @Summary 批量导出角色
+// @Security ApiKeyAuth
+// @accept application/json
+// @Produce application/json
+// @Param data body request.SysRoleExcelOut true "批量导出请求模型"
+// @Success 200 {string} string "{"success":true,"data":{},"msg":"批量导出成功"}"
+// @Router /api/sysRole/excelOut [POST]
+func ExcelOutSysRole(c *gin.Context) {
+	var E request.SysRoleExcelOut
+	_ = c.ShouldBindJSON(&E)
+	err, excelFilePath := service.ExcelOutSysRole(E)
+	if err != nil {
+		global.GvaLog.Error("批量导出失败!", zap.Any("err", err))
+		response.FailWithMessage(err.Error(), c)
+		// 如果文件路径不为空，也需要删除文件
+		if excelFilePath != "" {
+			err = utils.DeleteLocalFile(excelFilePath)
+			if err != nil {
+				global.GvaLog.Error("删除文件失败!", zap.Any("err", err))
+				return
+			}
+		}
+		return
+	}
+	// 要设置这一条，要不然前端获取不到Content-Disposition
+	c.Writer.Header().Add("Access-Control-Expose-Headers", "Content-Disposition")
+	c.Writer.Header().Add("Content-Disposition", "roleTable.xlsx")
+	c.File(excelFilePath)
+	// 删除Excel文件
+	err = utils.DeleteLocalFile(excelFilePath)
+	if err != nil {
+		global.GvaLog.Error("删除文件失败!", zap.Any("err", err))
+		return
+	}
+	return
 }

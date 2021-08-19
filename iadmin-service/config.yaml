@@ -51,8 +51,16 @@ zap:
 casbin:
   model-path: './resource/rbac_model.conf'
 
+# file configuration
 file:
   # 允许上传的最大文件大小 3M
   max-upload-size: 3145728
-  file-local-url: './uploads/file'
-  allow-file-type: 'jpg|png'
+  file-local-dir: './uploads/file'
+  allow-file-type: 'jpg|png|xlsx'
+  # 允许下载的最大文件大小 300KB 30720Bytes
+  max-download-size: 307200
+
+# excel configuration
+excel:
+  # excel文件的存放路径
+  excel-store-dir: './uploads/excel'

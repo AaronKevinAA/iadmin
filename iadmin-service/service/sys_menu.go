@@ -1,9 +1,11 @@
 package service
 
 import (
+	"errors"
 	"ginProject/global"
 	"ginProject/model"
 	"ginProject/model/request"
+	"ginProject/utils"
 )
 
 func GetSysRouteList() (err error, tree []model.MenuItem) {
@@ -15,7 +17,7 @@ func GetSysRouteList() (err error, tree []model.MenuItem) {
 }
 
 func UpdateSysMenuInfo(req model.SysMenu) (err error, ret model.SysMenu) {
-	err = global.GvaDb.Debug().Updates(&req).Error
+	err = global.GvaDb.Updates(&req).Error
 	return err, req
 }
 
@@ -42,4 +44,24 @@ func GetSysMenuByToken(roleId uint) (err error, routes model.MenuList, menus []m
 	menus = routes.GetSysMenuTree(0, 1)
 
 	return err, routes, menus
+}
+
+func ExcelOutSysMenu(outRequest request.ExcelOutRequest) (err error, excelFilePath string) {
+	var menuList []model.SysMenu
+	// 如果查询出错则直接返回
+	err = global.GvaDb.Order("created_at desc").Find(&menuList).Error
+	if err != nil {
+		return err, ""
+	}
+	err, excelFilePath = utils.ExcelOut(outRequest.HasTableHead, model.SysMenuExcelOutTableHeadName(), model.SysMenuExcelOutTableData(menuList))
+	if err != nil {
+		return err, ""
+	}
+	// 获得文件大小
+	fileSize := utils.GetFileSize(excelFilePath)
+	// 如果文件大于设置的允许最大下载文件大小，则返回错误
+	if fileSize > global.GvaConfig.File.MaxDownloadSize {
+		return errors.New("文件过大，不支持本地下载！"), excelFilePath
+	}
+	return nil, excelFilePath
 }
