@@ -455,6 +455,72 @@ paths:
       summary: 更新角色api权限
       tags:
       - Casbin
+  /api/file/deleteBatchFile:
+    delete:
+      consumes:
+      - application/json
+      parameters:
+      - description: id列表
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/request.IdsReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"批量删除成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 批量删除文件
+      tags:
+      - File
+  /api/file/download:
+    get:
+      consumes:
+      - multipart/form-data
+      parameters:
+      - description: 文件数据库表id
+        in: query
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+      security:
+      - ApiKeyAuth: []
+      summary: 下载文件
+      tags:
+      - File
+  /api/file/getSysFileList:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 页码, 每页大小
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/request.Pagination'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取数据成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 分页获取文件列表
+      tags:
+      - File
   /api/file/upload:
     post:
       consumes:

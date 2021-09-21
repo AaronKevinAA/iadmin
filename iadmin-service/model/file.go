@@ -1,6 +1,9 @@
 package model
 
+import "ginProject/global"
+
 type File struct {
+	global.GvaModel
 	OldName string `json:"oldName"`
 	NewName string `json:"newName"`
 	Suffix  string `json:"suffix"`

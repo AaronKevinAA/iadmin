@@ -31,7 +31,7 @@ mysql:
 
 # system configuration
 system:
-  env: 'public'  # Change to "develop" to skip authentication for development mode
+  env: 'develop'  # Change to "develop" to skip authentication for development mode
   addr: 8991
   use-multipoint: true    # 多点登录拦截，true为拦截，false为不拦截
 
